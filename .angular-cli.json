@@ -19,9 +19,23 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.scss"
+        "../node_modules/bootstrap/dist/css/bootstrap.min.css",
+        "../node_modules/tether/dist/css/tether.min.css",
+        "sass/styles.scss"
       ],
-      "scripts": [],
+      "stylePreprocessorOptions": {
+          "includePaths": [
+            "sass"
+          ]
+        },
+      "scripts": [
+          "../node_modules/jquery/dist/jquery.slim.min.js",
+          "../node_modules/tether/dist/js/tether.min.js",
+          "../node_modules/bootstrap/dist/js/bootstrap.min.js",
+          "assets/vendor/fontawesome-5.0.0-rc2-mac/js/packs/brands.min.js",
+          "assets/vendor/fontawesome-5.0.0-rc2-mac/js/packs/solid.min.js",
+          "assets/vendor/fontawesome-5.0.0-rc2-mac/js/fontawesome.min.js"
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",

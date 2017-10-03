@@ -1,0 +1,18 @@
+@import "variables";
+@import "mixins";
+/* Carousel base class */
+
+.carousel {
+  background: url(~assets/images/1920x1080/wave.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.carousel-caption {
+  z-index: 10;
+  bottom: $bottom;
+}
+
+.carousel-item {
+  height: 32rem;
+}

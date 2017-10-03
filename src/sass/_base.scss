@@ -1,0 +1,63 @@
+@include google-font('Comfortaa:700');
+@include google-font('Open+Sans');
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  height: 100%;
+}
+
+body,
+html,
+html a {
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h4 {
+  font-family: $headline-font;
+}
+
+h2,
+h3,
+h5,
+p {
+  font-family: $text-font;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+}
+
+a:hover {
+  color: $link-hover;
+  text-decoration: none;
+}
+
+a:active {
+  color: $link-active;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:visited {
+  color: $link-visited;
+  text-decoration: none;
+}
+
+button {
+  @include box;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.italic {
+    font-style: italic;
+}
