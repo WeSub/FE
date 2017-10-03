@@ -1,4 +1,7 @@
 # WeSub
+1. Benjamin
+2. Nikol
+3. Stephen
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.4.
 
