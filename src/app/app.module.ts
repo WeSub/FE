@@ -7,6 +7,7 @@ import { CarouselComponent } from './carousel/carousel.component';
 import { PersonaListComponent } from './persona-list/persona-list.component';
 import { PersonaItemComponent } from './persona-item/persona-item.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { CarouselItemComponent } from './carousel-item/carousel-item.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     CarouselComponent,
     PersonaListComponent,
     PersonaItemComponent,
-    NavbarComponent
+    NavbarComponent,
+    CarouselItemComponent
   ],
   imports: [
     BrowserModule

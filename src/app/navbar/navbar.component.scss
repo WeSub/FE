@@ -1,2 +1,35 @@
 @import "variables";
 @import "mixins";
+
+/* NavBar */
+.navbar-light {
+    background-color: $ternary-color;
+    min-height: $navbar-height;
+    flex: 0 0 auto;
+    border-bottom: 0.1px solid black;
+    -webkit-box-shadow: 0 1.5px 1px -1px #817d7d;
+    -moz-box-shadow: 0 1.5px 1px -1px #817d7d;
+    box-shadow: 0 1.5px 1px -1px #817d7d;
+}
+
+.navbar-light .navbar-toggler:focus, .navbar-light .navbar-toggler:active {
+    color: $theme-color;
+}
+
+#navMenu {
+    text-align: right;
+}
+
+#toggler {
+	border: 0;
+	margin: 0 20px 0 0;
+}
+
+.navbar-toggler-icon {
+    font-size: calc(130% + 0.5vw);
+}
+
+.nav-item {
+    font-size: calc(100% + .2vw);
+    padding: 0 25px;
+}

@@ -2,12 +2,22 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-persona-list',
-  templateUrl: './persona-list.component.html',
+  template:`
+      <div class="container">
+          <ul id="persona-list">
+              <li *ngFor="let persona of personas">
+                <app-persona-item [persona]="persona"></app-persona-item>
+              </li>
+          </ul>
+      </div>
+  `,
   styleUrls: ['./persona-list.component.scss']
 })
 export class PersonaListComponent implements OnInit {
-
-  constructor() { }
+    personas:string[];
+  constructor() {
+      this.personas = ['The student', 'Young Pro', 'Family First', 'Awesome Grandparents'];
+   }
 
   ngOnInit() {
   }

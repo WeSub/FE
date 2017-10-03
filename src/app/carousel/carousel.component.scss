@@ -2,6 +2,10 @@
 @import "mixins";
 /* Carousel base class */
 
+#myCarousel {
+    height: 50vh;
+}
+
 .carousel {
   background: url(~assets/images/1920x1080/wave.png) no-repeat;
   background-size: cover;
@@ -11,8 +15,4 @@
 .carousel-caption {
   z-index: 10;
   bottom: 3rem;
-}
-
-.carousel-item {
-  height: 32rem;
 }
