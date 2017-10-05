@@ -4,10 +4,12 @@
 3. Stephen
 
 ## RoadMap
-- ngFor carousel-item
-- style persona | images | positioning
-- click and load
-- routing 
+- New component/subcomponent architecture
+- SemanticUI theme
+- Additional feature modules
+- Stock photos
+- Marketing verbiage
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.4.
 
