@@ -24,6 +24,7 @@ export class FooterComponent implements OnInit {
     this.sociallinks = ['twitter', 'facebook', 'instagram', 'linkedin', 'android', 'apple'];
   }
 
+
   ngOnInit() {
   }
 

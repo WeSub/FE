@@ -1,0 +1,19 @@
+@import "variables";
+@import "mixins";
+
+#navlinks {
+    li {
+        display: inline;
+    }
+
+    a {
+        color: $navbar-link-color;
+        padding: 6px 8px;
+        border-bottom: 1px solid transparentize($navbar-link-color, 1);
+        transition: border-bottom 0.5s;
+
+        &:hover {
+            border-bottom: 1px solid opacify($navbar-link-color, .5);
+        }
+    }
+}

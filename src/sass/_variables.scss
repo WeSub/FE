@@ -1,17 +1,33 @@
+// == THEME
+// Allowed values: Default, Light
+$theme: Default;
+
+// == COLORS
+// Default
+$theme-color: #00b0ff;
+$secondary-color: #53A870;
+$ternary-color: #fff;
+$navbar-link-color: #fff;
+$headline-color: #ffeb3b;
+$text-color: #000;
+$link-color: #000;
+$darken-amount: 15%;
+
+// Not implemented yet
+@if $theme == Light {
+    $theme-color: #fff;
+    $secondary-color: #53A870;
+    $ternary-color: #00364F;
+    $navbar-link-color: #000;
+    $headline-color: #000;
+    $text-color: #000;
+    $link-color: #000;
+    $darken-amount: 15%;
+}
+
 // == FONTS
 $headline-font: 'Comfortaa:700', Helvetica, cursive;
 $text-font: 'Open Sans', Arial, sans-serif;
-
-// == COLORS
-$theme-color: #00364F;
-$secondary-color: #53A870;
-$ternary-color: #fff;
-$headline-color: #ffeb3b;
-$text-color: #000;
-$link-color: #ffeb3b;
-$link-hover: #ffeb3b;
-$link-active: #ffeb3b;
-$link-visited: #ffeb3b;
 
 // == SIZES
 $navbar-height: 80px;
