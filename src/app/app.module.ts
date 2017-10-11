@@ -7,10 +7,6 @@ import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PersonaListComponent } from './persona-list/persona-list.component';
 import { PersonaListItemComponent } from './persona-list/persona-list-item/persona-list-item.component';
-import { PackageListComponent } from './package-list/package-list.component';
-import { PackageListItemComponent } from './package-list/package-list-item/package-list-item.component';
-import { PackageItemSvcListComponent } from './package-list/package-item-svc-list/package-item-svc-list.component';
-import { PackageItemSvcListItemComponent } from './package-list/package-item-svc-list-item/package-item-svc-list-item.component';
 import { SelectionSummaryListComponent } from './selection-summary-list/selection-summary-list.component';
 import { SelectionSummaryListItemComponent } from './selection-summary-list/selection-summary-list-item/selection-summary-list-item.component';
 import { SelectionIconComponent } from './selection-summary-list/selection-summary-list-item/selection-icon/selection-icon.component';
@@ -19,6 +15,7 @@ import { SelectionDescriptionComponent } from './selection-summary-list/selectio
 import { SelectionPriceComponent } from './selection-summary-list/selection-summary-list-item/selection-price/selection-price.component';
 import { StyleVisualRefComponent } from './style-visual-ref/style-visual-ref.component';
 import { HeaderContainerComponent } from './header-container/header-container.component';
+import { TierListComponent } from './persona-list/persona-list-item/tier-list/tier-list.component';
 
 @NgModule({
   declarations: [
@@ -27,10 +24,6 @@ import { HeaderContainerComponent } from './header-container/header-container.co
     NavbarComponent,
     PersonaListComponent,
     PersonaListItemComponent,
-    PackageListComponent,
-    PackageListItemComponent,
-    PackageItemSvcListComponent,
-    PackageItemSvcListItemComponent,
     SelectionSummaryListComponent,
     SelectionSummaryListItemComponent,
     SelectionIconComponent,
@@ -39,6 +32,7 @@ import { HeaderContainerComponent } from './header-container/header-container.co
     SelectionPriceComponent,
     StyleVisualRefComponent,
     HeaderContainerComponent,
+    TierListComponent,
 
   ],
   imports: [

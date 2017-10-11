@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PackageItemSvcListComponent } from './package-item-svc-list.component';
+import { TierListComponent } from './tier-list.component';
 
-describe('PackageItemSvcListComponent', () => {
-  let component: PackageItemSvcListComponent;
-  let fixture: ComponentFixture<PackageItemSvcListComponent>;
+describe('TierListComponent', () => {
+  let component: TierListComponent;
+  let fixture: ComponentFixture<TierListComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PackageItemSvcListComponent ]
+      declarations: [ TierListComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PackageItemSvcListComponent);
+    fixture = TestBed.createComponent(TierListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

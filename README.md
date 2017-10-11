@@ -4,14 +4,9 @@
 3. Stephen
 
 ## RoadMap
-- Cookie banner/policy
-- GoogleAnalytics
-- New component/subcomponent architecture with future module features
-- SemanticUI theme
-- Additional feature modules
-- Stock photos
-- Marketing verbiage
-- Connection to DB fed by scraper?
+- Pass selectedPersona.tiers[] to TierListComponent
+- Routing between Persona to Tier
+- Tier component breakdown
 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.4.

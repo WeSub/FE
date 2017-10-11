@@ -5,7 +5,7 @@ import { Persona } from '../../classes/persona.model';
   selector: 'app-persona-list-item',
   template: `
     <div>
-        <div class="ui medium rounded image" [attr.data-tooltip]="persona.description" data-inverted="">
+        <div class="ui medium rounded image" [attr.data-tooltip]="persona.description" data-inverted="" data-position="bottom right">
             <div class="ui ribbon label {{ persona.color }}">{{ persona.name }}</div>
             <a href="#"><img [src]="persona.imageUrl"></a>
         </div>
