@@ -18,6 +18,8 @@ import { SelectionIconComponent } from './selection-summary-list/selection-summa
 import { SelectionNameComponent } from './selection-summary-list/selection-summary-list-item/selection-name/selection-name.component';
 import { SelectionDescriptionComponent } from './selection-summary-list/selection-summary-list-item/selection-description/selection-description.component';
 import { SelectionPriceComponent } from './selection-summary-list/selection-summary-list-item/selection-price/selection-price.component';
+import { StyleVisualRefComponent } from './style-visual-ref/style-visual-ref.component';
+import { HeaderContainerComponent } from './header-container/header-container.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +39,8 @@ import { SelectionPriceComponent } from './selection-summary-list/selection-summ
     SelectionNameComponent,
     SelectionDescriptionComponent,
     SelectionPriceComponent,
+    StyleVisualRefComponent,
+    HeaderContainerComponent,
 
   ],
   imports: [

@@ -1,2 +1,6 @@
+<app-header-container></app-header-container>
 <app-navbar></app-navbar>
+<div class="ui container">
+    <app-persona-list [personasList]="personas"(onPersonaSelected)="personaWasSelected($event)"></app-persona-list>
+</div>
 <app-footer></app-footer>

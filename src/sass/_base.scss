@@ -1,34 +1,10 @@
 @include google-font('Comfortaa:700');
 @include google-font('Open+Sans');
 
-// * {
-//   box-sizing: border-box;
-// }
-//
 html,
 body {
   background-color: $theme-color;
-  font-size: calc(60% + 0.5vw);
 }
-//
-// body,
-// html,
-// html a {
-//   -webkit-font-smoothing: antialiased;
-// }
-//
-// h1,
-// h4 {
-//   font-family: $headline-font;
-//   color: $headline-color;
-// }
-//
-// h2,
-// h3,
-// h5,
-// p {
-//   font-family: $text-font;
-// }
 
 a {
   color: $link-color;
