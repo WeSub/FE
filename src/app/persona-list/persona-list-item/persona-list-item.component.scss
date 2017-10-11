@@ -1,0 +1,13 @@
+.image {
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+	-webkit-transition: .3s ease-in-out;
+	transition: .4s ease-in-out;
+}
+
+.image:hover {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.8);
+    transition: 1s;
+}

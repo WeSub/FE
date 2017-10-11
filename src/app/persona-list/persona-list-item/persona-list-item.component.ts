@@ -4,10 +4,10 @@ import { Persona } from '../../classes/persona.model';
 @Component({
   selector: 'app-persona-list-item',
   template: `
-    <div class="four wide column">
-        <div class="ui medium image" [attr.data-tooltip]="persona.description" data-inverted="">
-            <div class="ui red ribbon label">{{ persona.name }}</div>
-            <img [src]="persona.imageUrl">
+    <div>
+        <div class="ui medium rounded image" [attr.data-tooltip]="persona.description" data-inverted="">
+            <div class="ui ribbon label {{ persona.color }}">{{ persona.name }}</div>
+            <a href="#"><img [src]="persona.imageUrl"></a>
         </div>
     </div>
   `,
@@ -17,6 +17,7 @@ export class PersonaListItemComponent implements OnInit {
     @Input() persona: Persona;
     @HostBinding('attr.class') cssClass = 'four wide column';
   constructor() { }
+
 
   ngOnInit() {
   }

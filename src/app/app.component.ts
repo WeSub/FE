@@ -16,28 +16,32 @@ export class AppComponent {
         'The Student',
         ['Budget', 'Comfortable', 'Premium'],
         '../assets/images/student.jpg',
-        'Just starting out and ready to take on the world!'
+        'Just starting out and ready to take on the world!',
+        'red'
       ),
       new Persona(
         2,
         'The Professional',
         ['Budget', 'Comfortable', 'Premium'],
         '../assets/images/professional.jpg',
-        'Kicking ass and taking names!'
+        'Kicking ass and taking names!',
+        'blue'
       ),
       new Persona(
         3,
         'The Family',
         ['Budget', 'Comfortable', 'Premium'],
         '../assets/images/family.jpg',
-        'Expanding families and needs.'
+        'Expanding families and needs.',
+        'green'
       ),
       new Persona(
         4,
         'The Awesome Grandparents',
         ['Budget', 'Comfortable', 'Premium'],
         '../assets/images/grandparents.jpg',
-        'The most awesomest grandparents, ever!'
+        'The most awesomest grandparents, ever!',
+        'purple'
       )
     ]
   }

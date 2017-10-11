@@ -4,7 +4,8 @@ export class Persona {
         public name: string,
         public tiers: string[],
         public imageUrl: string,
-        public description: string
+        public description: string,
+        public color: string
     ) {
     }
 }

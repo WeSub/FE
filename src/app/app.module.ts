@@ -5,7 +5,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { NavbarItemComponent } from './navbar/navbar-item/navbar-item.component';
 import { PersonaListComponent } from './persona-list/persona-list.component';
 import { PersonaListItemComponent } from './persona-list/persona-list-item/persona-list-item.component';
 import { PackageListComponent } from './package-list/package-list.component';
@@ -26,7 +25,6 @@ import { HeaderContainerComponent } from './header-container/header-container.co
     AppComponent,
     FooterComponent,
     NavbarComponent,
-    NavbarItemComponent,
     PersonaListComponent,
     PersonaListItemComponent,
     PackageListComponent,
