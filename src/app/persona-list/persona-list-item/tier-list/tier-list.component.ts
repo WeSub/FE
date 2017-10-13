@@ -3,11 +3,7 @@ import { Persona } from '../../../classes/persona.model';
 
 @Component({
   selector: 'app-tier-list',
-  template: `
-  <div class="ui vertical list" *ngFor="let tier of tiers">
-      <a href="#" class="item">{{ tier }}</a>
-  </div>
-  `,
+  templateUrl: './tier-list.component.html',
   styleUrls: ['./tier-list.component.scss']
 })
 export class TierListComponent implements OnInit {
