@@ -1,10 +1,11 @@
-<app-header-container></app-header-container>
 <app-navbar></app-navbar>
 <div class="ui fluid container" id="main-container">
+    <app-header-container></app-header-container>
     <app-persona-list [personasList]="personas"(onPersonaSelected)="personaWasSelected($event)"></app-persona-list>
     <app-tier-list></app-tier-list>
     <div class="test">
 
     </div>
 </div>
+<app-team-roster></app-team-roster>
 <app-footer></app-footer>

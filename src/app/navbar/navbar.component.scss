@@ -1,8 +1,33 @@
+@import "variables";
+
 #navbar {
-    border: 0;
-    margin: 50px 50px;
+    background-color: $navbar-color;
+    min-height: $navbar-height;
 }
 
-#searchbar input::placeholder {
-  color: #000;
+.nav-item {
+    padding: 20px 30px;
+    color: $navbar-link-color;
+}
+
+.nav-item a {
+    color: inherit;
+}
+
+#right-menu {
+    padding-right: 80px;
+}
+
+#searchbar {
+    color: $navbar-link-color;
+    padding-right: 80px;
+}
+
+#searchbar input, #searchbar input::placeholder {
+  color: $navbar-link-color;
+  padding-right: 60px;
+}
+
+#searchbar i.icon {
+    color: inherit;
 }

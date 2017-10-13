@@ -16,6 +16,8 @@ import { SelectionPriceComponent } from './selection-summary-list/selection-summ
 import { StyleVisualRefComponent } from './style-visual-ref/style-visual-ref.component';
 import { HeaderContainerComponent } from './header-container/header-container.component';
 import { TierListComponent } from './persona-list/persona-list-item/tier-list/tier-list.component';
+import { StepsComponent } from './steps/steps.component';
+import { TeamRosterComponent } from './team-roster/team-roster.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +35,8 @@ import { TierListComponent } from './persona-list/persona-list-item/tier-list/ti
     StyleVisualRefComponent,
     HeaderContainerComponent,
     TierListComponent,
+    StepsComponent,
+    TeamRosterComponent,
 
   ],
   imports: [

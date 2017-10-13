@@ -6,10 +6,24 @@ body {
   background-color: $theme-color;
 }
 
+h1, h3, h5 {
+    font-family: $headline-font;
+    color: $text-color;
+}
+
+h2, h4, h6, p {
+    font-family: $text-font;
+    color: $text-color;
+}
+
 a {
   color: $link-color;
   text-decoration: none;
   &:hover {
       color: darken($link-color, $darken-amount);
   }
+}
+
+.header {
+    color: $headline-color;
 }
