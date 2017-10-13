@@ -4,7 +4,7 @@ import { Persona } from '../classes/persona.model';
 @Component({
   selector: 'app-persona-list',
   template: `
-  <div class="ui center aligned grid">
+  <div class="ui center aligned four column grid">
     <app-persona-list-item
       *ngFor="let myPersona of personasList"
       [persona]="myPersona"

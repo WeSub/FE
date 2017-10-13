@@ -4,10 +4,10 @@ import { Persona } from '../../classes/persona.model';
 @Component({
   selector: 'app-persona-list-item',
   template: `
-    <div>
+    <div class="column">
         <div class="ui medium rounded image" [attr.data-tooltip]="persona.description" data-inverted="" data-position="bottom right">
-            <div class="ui ribbon label {{ persona.color }}">{{ persona.name }}</div>
-            <a href="#"><img [src]="persona.imageUrl"></a>
+            <a class="ui ribbon label {{ persona.color }}">{{ persona.name }}</a>
+            <a href="#"><img id="persona-image" [src]="persona.imageUrl"></a>
         </div>
     </div>
   `,

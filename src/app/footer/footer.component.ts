@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostBinding } from '@angular/core';
 //convert to ngFOR and array
 @Component({
   selector: 'app-footer',

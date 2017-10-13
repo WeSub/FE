@@ -13,7 +13,7 @@ export class AppComponent {
     this.personas = [
       new Persona(
         1,
-        'The Student',
+        'Students',
         ['Budget', 'Comfortable', 'Premium'],
         '../assets/images/student.jpg',
         'Just starting out and ready to take on the world!',
@@ -21,7 +21,7 @@ export class AppComponent {
       ),
       new Persona(
         2,
-        'The Professional',
+        'Professionals',
         ['Budget', 'Comfortable', 'Premium'],
         '../assets/images/professional.jpg',
         'Kicking ass and taking names!',
@@ -29,7 +29,7 @@ export class AppComponent {
       ),
       new Persona(
         3,
-        'The Family',
+        'Families',
         ['Budget', 'Comfortable', 'Premium'],
         '../assets/images/family.jpg',
         'Expanding families and needs.',
@@ -37,7 +37,7 @@ export class AppComponent {
       ),
       new Persona(
         4,
-        'The Awesome Grandparents',
+        'Awesome Grandparents',
         ['Budget', 'Comfortable', 'Premium'],
         '../assets/images/grandparents.jpg',
         'The most awesomest grandparents, ever!',
