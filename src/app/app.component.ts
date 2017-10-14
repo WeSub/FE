@@ -20,7 +20,6 @@ export class AppComponent {
     this.persona1 = new Persona();
     this.persona1.id = 1;
     this.persona1.name = 'Students';
-    this.persona1.tiers = ['Budget', 'Comfortable', 'Premium'];
     this.persona1.imageUrl = '../assets/images/student.jpg';
     this.persona1.description = 'Just starting out and ready to take on the world!';
     this.persona1.color = 'red';

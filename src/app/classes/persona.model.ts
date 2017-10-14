@@ -1,7 +1,7 @@
 export class Persona {
   private _id: number;
   private _name: string;
-  private _tiers: string[];
+  private _tiers: string[] = ['Budget','Comfortable','Premium'];
   private _imageUrl: string;
   private _description: string;
   private _color: string;

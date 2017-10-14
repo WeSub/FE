@@ -3,19 +3,22 @@ import { Component, OnInit, HostBinding } from '@angular/core';
 @Component({
   selector: 'app-navbar',
   template: `
-  <div class="ui big phone stackable fixed main menu" id="navbar">
-    <div *ngFor="let item of navlinks" class="nav-item">
-        <i class="ui {{ item.icon }} icon"></i>
-        <a href="#" class="item.name" >{{ item.name }}</a>
-    </div>
-    <div class="right menu" id="right-menu">
-        <div class="ui transparent icon input" id="searchbar">
-            <input type="text" placeholder="Enter Search Here...">
-            <i class="search icon"></i>
+    <div class="ui small phone stackable fixed secondary labeled icon menu" id="navbar">
+        <div class="item">
+            <img class="ui avatar image" src="../assets/images/avatars/stephen.png">
+        </div>
+        <div *ngFor="let item of navlinks" class="nav-item">
+            <a href="#{{ item.name }}" class="item" >
+                <i class="ui {{ item.icon }} icon"></i>
+                {{ item.name }}
+            </a>
+        </div>
+        <div class="right menu" id="right-menu">
+            <div class="item">
+                <app-steps></app-steps>
+            </div>
         </div>
     </div>
-    </div>
-    <app-steps></app-steps>
   `,
   styleUrls: ['./navbar.component.scss']
 })

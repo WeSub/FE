@@ -6,12 +6,11 @@
 }
 
 .nav-item {
-    padding: 20px 30px;
-    color: $navbar-link-color;
+    padding: 10px 0;
 }
 
-.nav-item a {
-    color: inherit;
+.nav-item a .icon {
+    color: $navbar-link-color;
 }
 
 #right-menu {

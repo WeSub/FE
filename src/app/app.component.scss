@@ -1,7 +1,7 @@
 @import "variables";
 
 #main-container {
-    height: 100%;
+    min-height: 100%;
     margin-top: $navbar-height;
     padding: $component-padding;
 }
