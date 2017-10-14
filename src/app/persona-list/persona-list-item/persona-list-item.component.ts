@@ -16,8 +16,9 @@ import { Persona } from '../../classes/persona.model';
 export class PersonaListItemComponent implements OnInit {
     @Input() persona: Persona;
     @HostBinding('attr.class') cssClass = 'four wide column';
-  constructor() { }
 
+  constructor() {
+  }
 
   ngOnInit() {
   }

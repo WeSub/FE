@@ -15,7 +15,7 @@ import { SelectionDescriptionComponent } from './selection-summary-list/selectio
 import { SelectionPriceComponent } from './selection-summary-list/selection-summary-list-item/selection-price/selection-price.component';
 import { StyleVisualRefComponent } from './style-visual-ref/style-visual-ref.component';
 import { HeaderContainerComponent } from './header-container/header-container.component';
-import { TierListComponent } from './persona-list/persona-list-item/tier-list/tier-list.component';
+import { TierListComponent } from './persona-list/tier-list/tier-list.component';
 import { StepsComponent } from './steps/steps.component';
 import { TeamRosterComponent } from './team-roster/team-roster.component';
 

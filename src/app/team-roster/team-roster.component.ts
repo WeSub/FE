@@ -8,12 +8,14 @@ import { Component, OnInit } from '@angular/core';
         <img class="ui avatar image" src="{{ member.avatar }}">
         <div class="content">
           <a class="header">{{ member.name }}</a>
-          {{ member.email }} || 
-          <a href="https://www.linkedin.com/in/{{ member.linkedin }}" target="_blank"><i class="linkedin icon"></i></a>
-          <div class="description">{{ member.message }}</div>
+            <h6 class="ui header mini">{{ member.email }}
+                <a href="https://www.linkedin.com/in/{{ member.linkedin }}" target="_blank"><i class="icon linkedin square blue"></i></a>
+                <div class="description"><p>{{ member.message }}</p></div>
+            </h6>
         </div>
       </div>
   </div>
+  <br><br>
   `,
   styleUrls: ['./team-roster.component.scss']
 })

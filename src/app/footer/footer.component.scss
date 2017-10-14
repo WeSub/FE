@@ -6,14 +6,14 @@
 }
 
 #cvr {
-  padding: 8px 0;
+  padding: 8px 0 0 0;
 }
 
-#footer a.inverted-link {
-    color: $inverted-link-color;
-}
-
-#footer a.social {
-    color: $inverted-link-color;
+#footer a.social i {
+    color: $navbar-color;
     padding: 6px 6px;
+
+    &:hover {
+        color: darken($link-color, $darken-amount);
+    }
 }
