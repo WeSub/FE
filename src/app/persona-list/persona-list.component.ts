@@ -32,7 +32,7 @@ export class PersonaListComponent implements OnInit {
 
   clicked(persona: Persona): void {
     this.currentPersona = persona;
-    this.sessionPersona = persona;
+    this.sessionPersona = persona; // is this necessary if it gets assigned in app.component.ts?
     this.onPersonaSelected.emit(persona);
   }
 

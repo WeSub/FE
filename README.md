@@ -4,6 +4,7 @@
 3. Stephen
 
 ## RoadMap
+-  ***Create subscriber service to build and change as user selects or removes options to hold it in session rather than keeping the logic in the component.***
 - Pass selectedPersona.tiers[] to TierListComponent
 - Routing between Persona to Tier
 - Tier component breakdown

@@ -4,6 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { UserPersonaService } from './services/user-persona.service';
 import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PersonaListComponent } from './persona-list/persona-list.component';
@@ -46,7 +47,7 @@ import { TeamRosterComponent } from './team-roster/team-roster.component';
     ReactiveFormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [UserPersonaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
