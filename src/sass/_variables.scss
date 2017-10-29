@@ -4,13 +4,13 @@ $theme: Default;
 
 // == COLORS
 // Default
-$theme-color: #ffa000;
+$theme-color: #FFF;
 $secondary-color: #03a9f4;
 $ternary-color: #212121;
-$navbar-color: #36485D;
+$navbar-color: #ffa000;
 $navbar-link-color: #fafafa;
-$headline-color: #dd2c00;
-$text-color: #000;
+$headline-color: #1A1A1A;
+$text-color: #1A1A1A;
 $link-color: #03a9f4;
 $inverted-link-color: #000;
 $darken-amount: 15%;
@@ -30,8 +30,8 @@ $darken-amount: 15%;
 }
 
 // == FONTS
-$headline-font: 'Comfortaa:700', Helvetica, cursive;
-$text-font: 'Open Sans', Arial, sans-serif;
+// $headline-font: 'Comfortaa:700', Helvetica, cursive;
+// $text-font: 'Open Sans', Arial, sans-serif;
 
 // == SIZES
 $navbar-height: 50px;

@@ -3,3 +3,8 @@
 #header-container {
     padding: $component-padding;
 }
+
+.title {
+    font-size: calc(300% + 0.5vw);
+    font-weight: medium;
+}

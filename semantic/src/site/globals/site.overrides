@@ -1,3 +1,4 @@
 /*******************************
          Site Overrides
 *******************************/
+@fontPath  : '../../themes/WeSub/assets/fonts';

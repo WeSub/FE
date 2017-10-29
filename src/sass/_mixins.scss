@@ -1,8 +1,3 @@
-@mixin google-font($font) {
-	$font: unquote($font);
-	@import url(https://fonts.googleapis.com/css?family=#{$font}); //or import the file directly
-}
-
 @mixin rounded($radius: 6px) {
 	border-radius: $radius;
 }
