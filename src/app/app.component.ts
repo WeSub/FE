@@ -52,16 +52,15 @@ export class AppComponent {
     this.persona4.color = 'purple';
     this.persona4.selectedTier = '';
     this.persona4.selectedServices = [];
-
-    this.personas = [
-      this.persona1,
-      this.persona2,
-      this.persona3,
-      this.persona4
-    ]
   }
 
   ngOnInit() {
+      this.personas = [
+        this.persona1,
+        this.persona2,
+        this.persona3,
+        this.persona4
+      ]
   }
 
   personaWasSelected(persona: Persona): void {
