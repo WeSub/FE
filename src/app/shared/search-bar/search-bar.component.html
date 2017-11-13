@@ -1,3 +1,36 @@
-<p>
-  search-bar works!
-</p>
+<form class="ui form" [formGroup]="searchBar" (ngSubmit)="onSubmit(searchBar.value)" [class.error]="!searchBar.valid && searchBar.touched">
+  <div class="inline fields">
+
+<!-- category -->
+    <div class="inline four wide field">
+      <select class="ui fluid dropdown" id="search-category" [formControl]="category">
+             <option *ngFor="let category of categories" [attr.data-value]="category">
+                 {{ category }}
+             </option>
+         </select>
+    </div>
+
+<!-- country -->
+    <div class="inline four wide field">
+      <select class="ui fluid dropdown" id="search-country" [formControl]="country">
+           <option *ngFor="let country of countries" [attr.data-value]="country.abbreviation">
+                {{ country.name }}
+           </option>
+       </select>
+    </div>
+<!-- region -->
+    <div class="inline four wide field">
+      <select class="ui fluid dropdown" id="search-region" [formControl]="region">
+           <option *ngFor="let region of regions" [attr.data-value]="region">
+                {{ region }}
+           </option>
+       </select>
+    </div>
+
+<!-- Submit Button -->
+    <div class="inline four wide field">
+        <button class="ui teal fluid button" type="submit" [disabled]="!searchBar.valid"><i class="search icon"></i>Search</button>
+    </div>
+<!-- End of Fields -->
+  </div>
+</form>

@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, AbstractControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -22,6 +22,7 @@ import { BudgetService } from './services/budget.service';
 import { ComfortableService } from './services/comfortable.service';
 import { PremiumService } from './services/premium.service';
 import { TierSelectService } from './services/tier-select.service';
+import { DropdownDirective } from './shared/dropdown.directive';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { TierSelectService } from './services/tier-select.service';
     SearchBarComponent,
     TierOfferComponent,
     TierBudgetMenuComponent,
-    TierBudgetMenuItemComponent
+    TierBudgetMenuItemComponent,
+    DropdownDirective
   ],
   imports: [
     BrowserModule,

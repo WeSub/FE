@@ -54,9 +54,9 @@
 
 .ui.form .field > label {
   display: block;
-  margin: 0em 0em 0.28571429rem 0em;
-  color: #212121;
-  font-size: 0.78571429em;
+  margin: 0em 0em 0.25rem 0em;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 0.6875em;
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -99,17 +99,17 @@
 .ui.form input[type="text"],
 .ui.form input[type="file"],
 .ui.form input[type="url"] {
-  font-family: 'Open+Sans', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
   margin: 0em;
   outline: none;
   -webkit-appearance: none;
   tap-highlight-color: rgba(255, 255, 255, 0);
   line-height: 1.21428571em;
-  padding: 0.67857143em 0.5em;
+  padding: 0.58035714em 0.5em;
   font-size: 1em;
   background: transparent;
   border: none;
-  color: #212121;
+  color: rgba(0, 0, 0, 0.8);
   border-radius: 0em;
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -126,7 +126,7 @@
   background: transparent;
   border: 1px solid #DDDDDD;
   outline: none;
-  color: #212121;
+  color: rgba(0, 0, 0, 0.8);
   border-radius: 0em;
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -168,7 +168,7 @@
   -webkit-box-shadow: none;
           box-shadow: none;
   padding: 0.62em 0.5em;
-  color: #212121;
+  color: rgba(0, 0, 0, 0.8);
   -webkit-transition: color 0.1s ease, border-color 0.1s ease;
   transition: color 0.1s ease, border-color 0.1s ease;
 }
@@ -314,22 +314,22 @@
 
 /* browsers require these rules separate */
 .ui.form ::-webkit-input-placeholder {
-  color: #adadad;
+  color: rgba(140, 140, 140, 0.8);
 }
 .ui.form :-ms-input-placeholder {
-  color: #adadad;
+  color: rgba(140, 140, 140, 0.8);
 }
 .ui.form ::-moz-placeholder {
-  color: #adadad;
+  color: rgba(140, 140, 140, 0.8);
 }
 .ui.form :focus::-webkit-input-placeholder {
-  color: #7a7a7a;
+  color: rgba(89, 89, 89, 0.8);
 }
 .ui.form :focus:-ms-input-placeholder {
-  color: #7a7a7a;
+  color: rgba(89, 89, 89, 0.8);
 }
 .ui.form :focus::-moz-placeholder {
-  color: #7a7a7a;
+  color: rgba(89, 89, 89, 0.8);
 }
 
 /* Error Placeholder */
@@ -502,10 +502,10 @@
 .ui.form .field.error input[type="url"]:focus {
   background: #FFF6F6;
   border-color: #E0B4B4;
-  color: #fd2313;
+  color: #ff291c;
   -webkit-appearance: none;
-  -webkit-box-shadow: 0px 0em 0em 0em #fd2313 inset;
-          box-shadow: 0px 0em 0em 0em #fd2313 inset;
+  -webkit-box-shadow: 0px 0em 0em 0em #ff291c inset;
+          box-shadow: 0px 0em 0em 0em #ff291c inset;
 }
 
 /* Preserve Native Select Stylings */
@@ -635,7 +635,7 @@
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
   border-radius: 500rem;
-  border-color: #9E9E9E rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1);
+  border-color: #CCCCCC rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1);
   border-style: solid;
   border-width: 0.2em;
   -webkit-box-shadow: 0px 0px 0px 1px transparent;
@@ -681,7 +681,7 @@
 .ui.form .required.field > .checkbox:after {
   margin: -0.2em 0em 0em 0.2em;
   content: '*';
-  color: #F44336;
+  color: #FF4136;
 }
 .ui.form .required.fields:not(.grouped) > .field > label:after,
 .ui.form .required.fields.grouped > label:after,
@@ -754,9 +754,9 @@
   margin-bottom: 0em;
 }
 .ui.form .grouped.fields > label {
-  margin: 0em 0em 0.28571429rem 0em;
-  color: #212121;
-  font-size: 0.78571429em;
+  margin: 0em 0em 0.25rem 0em;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 0.6875em;
   font-weight: bold;
   text-transform: none;
 }
@@ -990,9 +990,9 @@
   margin-top: 0em;
   margin-bottom: 0em;
   vertical-align: baseline;
-  font-size: 0.78571429em;
+  font-size: 0.6875em;
   font-weight: bold;
-  color: #212121;
+  color: rgba(0, 0, 0, 0.8);
   text-transform: uppercase;
 }
 
@@ -1017,7 +1017,7 @@
 /* Label */
 .ui.form .inline.fields .field > :first-child,
 .ui.form .inline.field > :first-child {
-  margin: 0em 0.85714286em 0em 0em;
+  margin: 0em 0.875em 0em 0em;
 }
 .ui.form .inline.fields .field > :only-child,
 .ui.form .inline.field > :only-child {
@@ -1043,28 +1043,28 @@
 ---------------------*/
 
 .ui.mini.form {
-  font-size: 0.78571429rem;
+  font-size: 0.8125rem;
 }
 .ui.tiny.form {
-  font-size: 0.85714286rem;
+  font-size: 0.875rem;
 }
 .ui.small.form {
-  font-size: 0.92857143rem;
+  font-size: 0.9375rem;
 }
 .ui.form {
   font-size: 1rem;
 }
 .ui.large.form {
-  font-size: 1.14285714rem;
+  font-size: 1.125rem;
 }
 .ui.big.form {
-  font-size: 1.28571429rem;
+  font-size: 1.3125rem;
 }
 .ui.huge.form {
-  font-size: 1.42857143rem;
+  font-size: 1.4375rem;
 }
 .ui.massive.form {
-  font-size: 1.71428571rem;
+  font-size: 1.6875rem;
 }
 
 
@@ -1090,7 +1090,7 @@
 }
 .ui.form .selection.dropdown > .menu {
   border-top-width: 1px !important;
-  border-radius: 4px !important;
+  border-radius: 0.25rem !important;
 }
 .ui.form .ui.icon.input > .icon {
   width: 1em;
