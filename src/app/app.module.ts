@@ -18,6 +18,11 @@ import { TierOfferComponent } from './persona-list/tier-list/tier-offer/tier-off
 import { TierBudgetMenuComponent } from './persona-list/tier-list/tier-budget-menu/tier-budget-menu.component';
 import { TierBudgetMenuItemComponent } from './persona-list/tier-list/tier-budget-menu/tier-budget-menu-item/tier-budget-menu-item.component';
 
+import { BudgetService } from './services/budget.service';
+import { ComfortableService } from './services/comfortable.service';
+import { PremiumService } from './services/premium.service';
+import { TierSelectService } from './services/tier-select.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +46,7 @@ import { TierBudgetMenuItemComponent } from './persona-list/tier-list/tier-budge
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [TierSelectService, BudgetService, ComfortableService, PremiumService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

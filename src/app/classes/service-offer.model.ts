@@ -5,9 +5,12 @@ export class ServiceOffer {
     talk: string;
     data: string;
     sms: string;
+    speedDown: number;
+    speedUp: number;
     svcUrl: string;
     price: number;
     period: string;
     contract: boolean;
+    terms: string;
     category: string;
 }

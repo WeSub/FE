@@ -13,3 +13,8 @@ export class SearchBarComponent implements OnInit {
   }
 
 }
+
+
+// dropdown with categories
+// select country, with other countries deactivated
+// select region, sealand, midjylland, etc.

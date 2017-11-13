@@ -1,9 +1,10 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { TierSelectService } from '../../../../services/tier-select.service';
 
 @Component({
   selector: 'app-tier-budget-menu-item',
   template: `
-    <a class="item">
+    <a class="item" (click)="selectTier(navItem)">
         {{ navItem }}
     </a>
   `,
@@ -12,9 +13,12 @@ import { Component, OnInit, Input } from '@angular/core';
 export class TierBudgetMenuItemComponent implements OnInit {
     @Input() navItem: string;
 
-  constructor() { }
+  constructor(private tierSvc: TierSelectService) { }
 
   ngOnInit() {
   }
 
+  selectTier(selection: string) {
+    this.tierSvc.setSelecteTier(selection);
+  }
 }

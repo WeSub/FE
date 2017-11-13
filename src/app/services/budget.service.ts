@@ -22,6 +22,23 @@ export class BudgetService {
       this.mobileTelenor.category = 'mobile';
 
       this.internet = new ServiceOffer();
+      this.internet.id = 2;
+      this.internet.name = 'Telenor';
+      this.internet.description = 'Telenor Group is a Norwegian mostly government-owned multinational telecommunications company headquartered at Fornebu in Bærum, close to Oslo.';
+      this.internet.speedDown = 18;
+      this.internet.speedUp = 1;
+      this.internet.svcUrl = 'https://www.telenor.dk/shop/bredbaand/';
+      this.internet.price = 219;
+      this.internet.period = 'monthly';
+      this.internet.contract = true;
+      this.internet.terms = 'min. 6 months';
+      this.internet.category = 'internet';
+
+      this.offers = [this.mobileTelenor, this.internet];
+  }
+
+  getOffers() {
+      return this.offers;
   }
 
 }
