@@ -1,5 +1,7 @@
 import { Component, EventEmitter, OnInit } from '@angular/core';
+import { SessionUserService } from './services/session-user.service';
 import { Persona } from './classes/persona.model';
+import { SessionPersona } from './classes/session-persona.model';
 
 @Component({
   selector: 'app-root',
@@ -12,10 +14,9 @@ export class AppComponent {
   persona2: Persona;
   persona3: Persona;
   persona4: Persona;
-  sessionPersona: Persona;
+  sessionPersona: SessionPersona;
 
-  constructor() {
-    this.sessionPersona = new Persona(); // this creates an empty sessionPersona to store user's selections as an object for later use
+  constructor(private sessionSvc: SessionUserService) {
 
     this.persona1 = new Persona();
     this.persona1.id = 1;
@@ -23,8 +24,6 @@ export class AppComponent {
     this.persona1.imageUrl = '../assets/images/student.jpg';
     this.persona1.description = 'Just starting out and ready to take on the world!';
     this.persona1.color = 'red';
-    this.persona1.selectedTier = '';
-    this.persona1.selectedServices = [];
 
     this.persona2 = new Persona();
     this.persona2.id = 2;
@@ -32,8 +31,6 @@ export class AppComponent {
     this.persona2.imageUrl = '../assets/images/professional.jpg';
     this.persona2.description = 'Kicking ass and taking names!';
     this.persona2.color = 'blue';
-    this.persona2.selectedTier = '';
-    this.persona2.selectedServices = [];
 
     this.persona3 = new Persona();
     this.persona3.id = 3;
@@ -41,8 +38,6 @@ export class AppComponent {
     this.persona3.imageUrl = '../assets/images/family.jpg';
     this.persona3.description = 'Expanding families and needs.';
     this.persona3.color = 'green';
-    this.persona3.selectedTier = '';
-    this.persona3.selectedServices = [];
 
     this.persona4 = new Persona();
     this.persona4.id = 4;
@@ -50,8 +45,6 @@ export class AppComponent {
     this.persona4.imageUrl = '../assets/images/grandparents.jpg';
     this.persona4.description = 'The most awesomest grandparents, ever!';
     this.persona4.color = 'purple';
-    this.persona4.selectedTier = '';
-    this.persona4.selectedServices = [];
   }
 
   ngOnInit() {
@@ -61,11 +54,8 @@ export class AppComponent {
         this.persona3,
         this.persona4
       ]
-  }
 
-  personaWasSelected(persona: Persona): void {
-    console.log('Persona clicked', persona);
-    this.sessionPersona = persona;
-    console.log('Session:', this.sessionPersona);
+      this.sessionPersona = this.sessionSvc.getSessionPersona(); // this creates an empty sessionPersona to store user's selections as an object for later use
+      console.log(this.sessionPersona.name);
   }
 }

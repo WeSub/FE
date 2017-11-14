@@ -16,10 +16,10 @@ export class TierSelectService {
     private cSvc: ComfortableService,
     private pSvc: PremiumService
   ) {
-    this.budgetTier = this.bScv.getOffers();
-    this.comfortableTier = this.cSvc.getOffers();
-    this.premiumTier = this.pSvc.getOffers();
-    this.selectedTier = this.budgetTier;
+    // this.budgetTier = this.bScv.getOffers();
+    // this.comfortableTier = this.cSvc.getOffers();
+    // this.premiumTier = this.pSvc.getOffers();
+    // this.selectedTier = this.budgetTier;
   }
 
   getSelectedTier() {

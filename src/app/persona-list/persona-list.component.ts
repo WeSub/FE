@@ -1,5 +1,6 @@
-import { Component, OnInit, EventEmitter, Input, Output } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Persona } from '../classes/persona.model';
+import { SessionPersona } from '../classes/session-persona.model';
 
 @Component({
   selector: 'app-persona-list',
@@ -12,9 +13,7 @@ import { Persona } from '../classes/persona.model';
     <div class="ui center aligned four column grid" id="personas-list">
         <app-persona-list-item
             *ngFor="let myPersona of personasList"
-            [persona]="myPersona"
-            (click)="clicked(myPersona)"
-            [class.selected]="isSelected(myPersona)">
+            [persona]="myPersona">
         </app-persona-list-item>
     </div>
   `,
@@ -22,26 +21,9 @@ import { Persona } from '../classes/persona.model';
 })
 export class PersonaListComponent implements OnInit {
   @Input() personasList: Persona[];
-  @Input() sessionPersona: Persona;
-  @Output() onPersonaSelected: EventEmitter<Persona>;
-  private currentPersona: Persona;
+  @Input() sessionPersona: SessionPersona;
 
-  constructor() {
-    this.onPersonaSelected = new EventEmitter();
-  }
-
-  clicked(persona: Persona): void {
-    this.currentPersona = persona;
-    this.sessionPersona = persona; // is this necessary if it gets assigned in app.component.ts?
-    this.onPersonaSelected.emit(persona);
-  }
-
-  isSelected(persona: Persona): boolean {
-    if (!persona || !this.currentPersona) {
-      return false;
-    }
-    return persona.id === this.currentPersona.id;
-  }
+  constructor() { }
 
   ngOnInit() {
   }

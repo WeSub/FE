@@ -18,10 +18,11 @@ import { TierOfferComponent } from './persona-list/tier-list/tier-offer/tier-off
 import { TierBudgetMenuComponent } from './persona-list/tier-list/tier-budget-menu/tier-budget-menu.component';
 import { TierBudgetMenuItemComponent } from './persona-list/tier-list/tier-budget-menu/tier-budget-menu-item/tier-budget-menu-item.component';
 
+import { SessionUserService } from './services/session-user.service';
 import { BudgetService } from './services/budget.service';
 import { ComfortableService } from './services/comfortable.service';
 import { PremiumService } from './services/premium.service';
-import { TierSelectService } from './services/tier-select.service';
+
 import { DropdownDirective } from './shared/dropdown.directive';
 
 @NgModule({
@@ -48,7 +49,7 @@ import { DropdownDirective } from './shared/dropdown.directive';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [TierSelectService, BudgetService, ComfortableService, PremiumService],
+  providers: [SessionUserService, BudgetService, ComfortableService, PremiumService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

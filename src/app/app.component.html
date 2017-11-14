@@ -1,14 +1,10 @@
 <app-navbar></app-navbar>
 <div class="ui fluid container" id="main-container">
     <app-header-container></app-header-container>
-    <app-persona-list
-        [personasList]="personas"
-        (onPersonaSelected)="personaWasSelected($event)">
-    </app-persona-list>
+    <app-persona-list [personasList]="personas"></app-persona-list>
     <br>
     <br>
     <app-tier-list *ngIf="sessionPersona.name"
-        [selectedPersona]="sessionPersona">
-    </app-tier-list>
+        [sessionPersona]="sessionPersona"></app-tier-list>
 </div>
 <app-footer></app-footer>

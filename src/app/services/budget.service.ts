@@ -1,11 +1,16 @@
 import { Injectable } from '@angular/core';
 import { ServiceOffer } from '../classes/service-offer.model';
 
+// list of all offers, provided to each persona based on their criteria
 @Injectable()
 export class BudgetService {
-    offers: ServiceOffer[];
+    studentOffers: ServiceOffer[];
+    professionalOffers: ServiceOffer[];
+    familyOffers: ServiceOffer[];
+    seniorOffers: ServiceOffer[];
+
     mobileTelenor: ServiceOffer;
-    internet: ServiceOffer;
+    internetTelenor: ServiceOffer;
 
   constructor() {
       this.mobileTelenor = new ServiceOffer();
@@ -21,24 +26,36 @@ export class BudgetService {
       this.mobileTelenor.contract = false;
       this.mobileTelenor.category = 'mobile';
 
-      this.internet = new ServiceOffer();
-      this.internet.id = 2;
-      this.internet.name = 'Telenor';
-      this.internet.description = 'Telenor Group is a Norwegian mostly government-owned multinational telecommunications company headquartered at Fornebu in Bærum, close to Oslo.';
-      this.internet.speedDown = 18;
-      this.internet.speedUp = 1;
-      this.internet.svcUrl = 'https://www.telenor.dk/shop/bredbaand/';
-      this.internet.price = 219;
-      this.internet.period = 'monthly';
-      this.internet.contract = true;
-      this.internet.terms = 'min. 6 months';
-      this.internet.category = 'internet';
-
-      this.offers = [this.mobileTelenor, this.internet];
+      this.internetTelenor = new ServiceOffer();
+      this.internetTelenor.id = 2;
+      this.internetTelenor.name = 'Telenor';
+      this.internetTelenor.description = 'Telenor Group is a Norwegian mostly government-owned multinational telecommunications company headquartered at Fornebu in Bærum, close to Oslo.';
+      this.internetTelenor.speedDown = 18;
+      this.internetTelenor.speedUp = 1;
+      this.internetTelenor.svcUrl = 'https://www.telenor.dk/shop/bredbaand/';
+      this.internetTelenor.price = 219;
+      this.internetTelenor.period = 'monthly';
+      this.internetTelenor.contract = true;
+      this.internetTelenor.terms = 'min. 6 months';
+      this.internetTelenor.category = 'internetTelenor';
   }
 
-  getOffers() {
-      return this.offers;
+  // implement sets to allow user to change criteria in the future?
+
+  getStudentOffers(): ServiceOffer[] {
+      return this.studentOffers = [this.mobileTelenor, this.internetTelenor];
+  }
+
+  getProffesionaOffers(): ServiceOffer[] {
+      return this.professionalOffers;
+  }
+
+  getFamilyOffers(): ServiceOffer[] {
+      return this.familyOffers;
+  }
+
+  getSeniorOffers(): ServiceOffer[] {
+      return this.seniorOffers;
   }
 
 }
