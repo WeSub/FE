@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, HostBinding } from '@angular/core';
-import { SessionPersona } from '../../classes/session-persona.model';
-import { ServiceOffer } from '../../classes/service-offer.model';
+import { SessionPersona } from '../classes/session-persona.model';
+import { ServiceOffer } from '../classes/service-offer.model';
 
 @Component({
   selector: 'app-tier-list',
@@ -10,8 +10,9 @@ import { ServiceOffer } from '../../classes/service-offer.model';
 export class TierListComponent implements OnInit {
   @Input() sessionPersona: SessionPersona;
   @HostBinding('attr.class') contClass = 'ui container';
- 
+
   constructor() { }
 
-  ngOnInit() { }
+  ngOnInit() {
+  }
 }

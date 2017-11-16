@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { TierSelectService } from '../../../../services/tier-select.service';
+import { SessionUserService } from '../../../services/session-user.service';
+
 
 @Component({
   selector: 'app-tier-budget-menu-item',
@@ -13,12 +14,13 @@ import { TierSelectService } from '../../../../services/tier-select.service';
 export class TierBudgetMenuItemComponent implements OnInit {
     @Input() navItem: string;
 
-  constructor(private tierSvc: TierSelectService) { }
+  constructor(private sessionSvc: SessionUserService) { }
 
   ngOnInit() {
   }
 
-  selectTier(selection: string) {
-    this.tierSvc.setSelecteTier(selection);
+  selectTier(tier: string) {
+      this.sessionSvc.setSelectedTier(tier);
   }
+
 }

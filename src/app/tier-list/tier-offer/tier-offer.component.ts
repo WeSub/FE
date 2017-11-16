@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ServiceOffer } from '../../../classes/service-offer.model';
-import { TierSelectService } from '../../../services/tier-select.service';
+import { ServiceOffer } from '../../classes/service-offer.model';
 
 @Component({
   selector: 'app-tier-offer',
@@ -20,12 +19,12 @@ import { TierSelectService } from '../../../services/tier-select.service';
 export class TierOfferComponent implements OnInit {
   selectedTier: ServiceOffer[];
 
-  constructor(private tierSvc: TierSelectService) {
-      this.selectedTier = this.tierSvc.getSelectedTier();
+  constructor() {
+
   }
 
   ngOnInit() {
-    this.selectedTier = this.tierSvc.getSelectedTier();
+    
   }
 
 }

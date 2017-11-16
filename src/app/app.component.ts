@@ -56,6 +56,6 @@ export class AppComponent {
       ]
 
       this.sessionPersona = this.sessionSvc.getSessionPersona(); // this creates an empty sessionPersona to store user's selections as an object for later use
-      console.log(this.sessionPersona.name);
+      console.log(this.sessionPersona);
   }
 }
