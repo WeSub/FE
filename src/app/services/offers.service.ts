@@ -6,10 +6,10 @@ import { ServiceOffer } from '../classes/service-offer.model';
 
 @Injectable()
 export class OffersService {
-  mobileOffers: ServiceOffer[];
-  internetOffers: ServiceOffer[];
-  streamOffers: ServiceOffer[];
-  fitnessOffers: ServiceOffer[]
+  private mobileOffers: ServiceOffer[];
+  private internetOffers: ServiceOffer[];
+  private streamOffers: ServiceOffer[];
+  private fitnessOffers: ServiceOffer[]
 
   lowestMobile: ServiceOffer;
   lowestInternet: ServiceOffer;
@@ -17,14 +17,19 @@ export class OffersService {
   lowestFitness: ServiceOffer;
 
   constructor() {
-      // instantiate fake offers
+      this. mobileOffers = [
+          new ServiceOffer(1, 'Telenor', 'desc', 'url', 'mobile', 149, 'monthly', false, 'terms', 'unlimited', '10 GB', 'unlimited'),
 
-
+          new ServiceOffer(1, 'Telenor2', 'desc', 'url', 'mobile', 199, 'monthly', false, 'terms', 'unlimited', '10 GB', 'unlimited'),
+      ]
 
   }
 
   // lowest offers
   getlowestMobile(): ServiceOffer {
+    this.mobileOffers.sort((a,b) => b.price - a.price).slice();
+    console.log(this.mobileOffers);
+    this.lowestMobile = this.mobileOffers[0];
     return this.lowestMobile;
   }
 
