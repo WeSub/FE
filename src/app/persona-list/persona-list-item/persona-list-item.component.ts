@@ -15,8 +15,8 @@ import { SessionUserService } from '../../services/session-user.service';
   styleUrls: ['./persona-list-item.component.scss']
 })
 export class PersonaListItemComponent implements OnInit {
-    @Input() persona: Persona;
-    @HostBinding('attr.class') cssClass = 'four wide column';
+  @Input() persona: Persona;
+  @HostBinding('attr.class') cssClass = 'four wide column';
 
   constructor(private sessionSvc: SessionUserService) {
   }
@@ -25,7 +25,13 @@ export class PersonaListItemComponent implements OnInit {
   }
 
   clicked(personaName: string) {
-      this.sessionSvc.setSessionPersonaName(personaName);
+    this.sessionSvc.setSessionPersonaName(personaName);
+    switch (personaName) {
+      case 'Students': this.sessionSvc.setStudentOffers();
+        break;
+      case 'Professionals': this.sessionSvc.setProfessionalOffers();
+        break;
+    }
   }
 
 }

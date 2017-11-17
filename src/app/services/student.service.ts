@@ -5,36 +5,36 @@ import { OffersService } from '../services/offers.service';
 
 @Injectable()
 export class StudentService {
-    mobileOffer: ServiceOffer;
-    internetOffer: ServiceOffer;
-    streamingOffer: ServiceOffer;
-    fitnessOffer: ServiceOffer;
-    offers: ServiceOffer[];
+    budgetOffers: ServiceOffer[];
+    comfortableOffers: ServiceOffer[];
+    premiumOffers: ServiceOffer[];
 
   constructor(private offerSvc: OffersService) {
-      this.mobileOffer = this.offerSvc.getlowestMobile();
-      this.internetOffer = this.offerSvc.getlowestInternet();
-      this.streamingOffer = this.offerSvc.getlowestStreaming();
-      this.fitnessOffer = this.offerSvc.getlowestFitness();
+      this.budgetOffers = [];
+      this.comfortableOffers = [];
+      this.premiumOffers = [];
   }
 
 // Needs to be optimised, do I really need to return all these times?
   getBudget(): ServiceOffer[] {
-      this.offers.push(this.mobileOffer);
-      this.offers.push(this.internetOffer);
-      return this.offers;
+      this.budgetOffers.push(this.offerSvc.getlowestMobile());
+      this.budgetOffers.push(this.offerSvc.getlowestInternet());
+      return this.budgetOffers;
   }
 
   getComfortable(): ServiceOffer[] {
-      this.getBudget();
-      this.offers.push(this.streamingOffer);
-      return this.offers;
+      this.comfortableOffers.push(this.budgetOffers[0]);
+      this.comfortableOffers.push(this.budgetOffers[1]);
+      this.comfortableOffers.push(this.offerSvc.getlowestStreaming());
+      return this.comfortableOffers;
   }
 
   getPremium(): ServiceOffer[] {
-      this.getComfortable();
-      this.offers.push(this.fitnessOffer);
-      return this.offers;
+      this.premiumOffers.push(this.comfortableOffers[0]);
+      this.premiumOffers.push(this.comfortableOffers[1]);
+      this.premiumOffers.push(this.comfortableOffers[2]);
+      this.premiumOffers.push(this.offerSvc.getlowestFitness());
+      return this.premiumOffers;
   }
 
 }

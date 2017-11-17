@@ -14,9 +14,9 @@ export class SessionUserService {
 
   // create and return the sessionPersona app-wide
   constructor(private studentSvc: StudentService,
-                private proSvc: ProfessionalService,
-                private famSvc: FamilyService,
-                private seniorSvc: SeniorService
+    private proSvc: ProfessionalService,
+    private famSvc: FamilyService,
+    private seniorSvc: SeniorService
   ) {
     this.sessionPersona = new SessionPersona();
   }
@@ -27,16 +27,21 @@ export class SessionUserService {
 
   // set and return the sessionPersona type via string student, pro, fam, senior
   setSessionPersonaName(personaName: string): void {
-    this.sessionPersona.name = personaName;
+    this.sessionPersona.selectedPersonaName = personaName;
   }
 
   getSessionPersonaName(): string {
-    return this.sessionPersona.name;
+    return this.sessionPersona.selectedPersonaName;
   }
 
-  // return the tier names, budget, comfortable, premium
-  getSessionPersonaTiers(): string[] {
-    return this.sessionPersona.tiers;
+  // set and return the selectedTier to show the right offers
+  setSelectedTierName(tierName: string): void {
+    this.sessionPersona.selectedTierName = tierName;
+    this.setSelectedTierOffers(tierName);
+  }
+
+  getSelectedTierName(): string {
+    return this.sessionPersona.selectedTierName;
   }
 
   // call the selected persona svc and get the offers
@@ -44,14 +49,20 @@ export class SessionUserService {
     this.sessionPersona.budget = this.studentSvc.getBudget();
     this.sessionPersona.comfortable = this.studentSvc.getComfortable();
     this.sessionPersona.premium = this.studentSvc.getPremium();
+    console.log(this.sessionPersona.budget);
+    console.log(this.sessionPersona.comfortable);
+    console.log(this.sessionPersona.premium);
   }
 
   setProfessionalOffers() {
     this.sessionPersona.budget = this.proSvc.getBudget();
     this.sessionPersona.comfortable = this.proSvc.getComfortable();
     this.sessionPersona.premium = this.proSvc.getPremium();
+    console.log(this.sessionPersona.budget);
+    console.log(this.sessionPersona.comfortable);
+    console.log(this.sessionPersona.premium);
   }
-  
+
   //
   // setFamilyOffers() {
   //   this.sessionPersona.budget = this.famSvc.getBudget();
@@ -65,6 +76,21 @@ export class SessionUserService {
   //   this.sessionPersona.premium = this.seniorSvc.getPremium();
   // }
 
-  // set and return the selectedTier to show the right offers
+  // set and return the selected tier OffersService
+  setSelectedTierOffers(selectedTierName: string): void {
+    this.sessionPersona.selectedTierName = selectedTierName;
+    switch (selectedTierName) {
+      case 'budget':
+        this.sessionPersona.selectedTierOffers = this.sessionPersona.budget;
+        break;
+      case 'comfortable': this.sessionPersona.selectedTierOffers = this.sessionPersona.comfortable;
+        break;
+      case 'premium': this.sessionPersona.selectedTierOffers = this.sessionPersona.premium;
+        break;
+    };
+  }
 
+  getSelectedTierOffers(): ServiceOffer[] {
+    return this.sessionPersona.selectedTierOffers;
+  }
 }

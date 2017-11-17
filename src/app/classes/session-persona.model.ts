@@ -2,11 +2,10 @@
 import { ServiceOffer } from './service-offer.model';
 
 export class SessionPersona {
-    name: string;
-    tiers: string[] = ['Budget', 'Comfortable', 'Premium'];
-    selectedTier: string;
+    selectedPersonaName: string;
+    selectedTierName: string;
     budget: ServiceOffer[];
     comfortable: ServiceOffer[];
     premium: ServiceOffer[];
-
+    selectedTierOffers: ServiceOffer[];
 }

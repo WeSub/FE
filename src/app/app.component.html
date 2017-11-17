@@ -4,7 +4,7 @@
     <app-persona-list [personasList]="personas"></app-persona-list>
     <br>
     <br>
-    <app-tier-list *ngIf="sessionPersona.name"
+    <app-tier-list *ngIf="sessionPersona.selectedPersonaName"
         [sessionPersona]="sessionPersona"></app-tier-list>
 </div>
 <app-footer></app-footer>

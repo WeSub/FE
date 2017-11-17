@@ -5,37 +5,35 @@ import { OffersService } from '../services/offers.service';
 
 @Injectable()
 export class ProfessionalService {
-    mobileOffer: ServiceOffer;
-    internetOffer: ServiceOffer;
-    streamingOffer: ServiceOffer;
-    fitnessOffer: ServiceOffer;
-    offers: ServiceOffer[];
+    budgetOffers: ServiceOffer[];
+    comfortableOffers: ServiceOffer[];
+    premiumOffers: ServiceOffer[];
 
   constructor(private offerSvc: OffersService) {
-      this.mobileOffer = this.offerSvc.gethighestMobile();
-      this.internetOffer = this.offerSvc.gethighestInternet();
-      this.streamingOffer = this.offerSvc.gethighestStreaming();
-      this.fitnessOffer = this.offerSvc.gethighestFitness();
+      this.budgetOffers = [];
+      this.comfortableOffers = [];
+      this.premiumOffers = [];
   }
 
-  // Needs to be optimised, do I really need to return all these times?
-    getBudget(): ServiceOffer[] {
-        this.offers.push(this.mobileOffer);
-        this.offers.push(this.internetOffer);
-        return this.offers;
-    }
+  getBudget(): ServiceOffer[] {
+      this.budgetOffers.push(this.offerSvc.gethighestMobile());
+      this.budgetOffers.push(this.offerSvc.gethighestInternet());
+      return this.budgetOffers;
+  }
 
-    getComfortable(): ServiceOffer[] {
-        this.getBudget();
-        this.offers.push(this.streamingOffer);
-        return this.offers;
-    }
+  getComfortable(): ServiceOffer[] {
+      this.comfortableOffers.push(this.budgetOffers[0]);
+      this.comfortableOffers.push(this.budgetOffers[1]);
+      this.comfortableOffers.push(this.offerSvc.gethighestStreaming());
+      return this.comfortableOffers;
+  }
 
-    getPremium(): ServiceOffer[] {
-        this.getComfortable();
-        this.offers.push(this.fitnessOffer);
-        return this.offers;
-    }
-
+  getPremium(): ServiceOffer[] {
+      this.premiumOffers.push(this.comfortableOffers[0]);
+      this.premiumOffers.push(this.comfortableOffers[1]);
+      this.premiumOffers.push(this.comfortableOffers[2]);
+      this.premiumOffers.push(this.offerSvc.gethighestFitness());
+      return this.premiumOffers;
+  }
 
 }

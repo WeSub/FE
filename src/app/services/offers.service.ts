@@ -9,56 +9,71 @@ export class OffersService {
   private mobileOffers: ServiceOffer[];
   private internetOffers: ServiceOffer[];
   private streamOffers: ServiceOffer[];
-  private fitnessOffers: ServiceOffer[]
-
-  lowestMobile: ServiceOffer;
-  lowestInternet: ServiceOffer;
-  lowestStreaming: ServiceOffer;
-  lowestFitness: ServiceOffer;
+  private fitnessOffers: ServiceOffer[];
 
   constructor() {
-      this. mobileOffers = [
-          new ServiceOffer(1, 'Telenor', 'desc', 'url', 'mobile', 149, 'monthly', false, 'terms', 'unlimited', '10 GB', 'unlimited'),
+    this.mobileOffers = [
+      new ServiceOffer(1, 'Telenor', 'desc', 'url', 'mobile', 149, 'monthly', false, 'terms', 'unlimited', '10 GB', 'unlimited'),
+      new ServiceOffer(1, 'Telenor2', 'desc', 'url', 'mobile', 199, 'monthly', false, 'terms', 'unlimited', '10 GB', 'unlimited')
+    ];
 
-          new ServiceOffer(1, 'Telenor2', 'desc', 'url', 'mobile', 199, 'monthly', false, 'terms', 'unlimited', '10 GB', 'unlimited'),
-      ]
+    this.internetOffers = [
 
+    ];
+
+    this.streamOffers = [
+
+    ];
+
+    this.fitnessOffers = [
+
+    ];
+
+    this.sortLowestHighest(this.mobileOffers);
+    this.sortLowestHighest(this.internetOffers);
+    this.sortLowestHighest(this.streamOffers);
+    this.sortLowestHighest(this.fitnessOffers);
   }
 
-  // lowest offers
+  // sorts offer arrays from lowest to highest in price
+  sortLowestHighest(offerArray: ServiceOffer[]) {
+    offerArray.sort((a, b) => a.price - b.price).slice();
+    return offerArray;
+  }
+
+  // Lowest offers
   getlowestMobile(): ServiceOffer {
-    this.mobileOffers.sort((a,b) => b.price - a.price).slice();
-    console.log(this.mobileOffers);
-    this.lowestMobile = this.mobileOffers[0];
-    return this.lowestMobile;
+    return this.mobileOffers[0];
   }
 
   getlowestInternet(): ServiceOffer {
-    return this.lowestInternet;
+    return this.internetOffers[0];
   }
 
   getlowestStreaming(): ServiceOffer {
-    return this.lowestStreaming;
+    return this.streamOffers[0];
   }
 
   getlowestFitness(): ServiceOffer {
-    return this.lowestFitness;
+    return this.fitnessOffers[0];
   }
 
   // Highest offers
   gethighestMobile(): ServiceOffer {
-    return this.lowestMobile;
+    return this.mobileOffers[this.mobileOffers.length - 1];
   }
 
   gethighestInternet(): ServiceOffer {
-    return this.lowestInternet;
+    return this.internetOffers[this.internetOffers.length - 1];
   }
 
   gethighestStreaming(): ServiceOffer {
-    return this.lowestStreaming;
+    return this.streamOffers[this.streamOffers.length - 1];
   }
 
   gethighestFitness(): ServiceOffer {
-    return this.lowestFitness;
+    return this.fitnessOffers[this.fitnessOffers.length - 1];
   }
+
+  
 }
