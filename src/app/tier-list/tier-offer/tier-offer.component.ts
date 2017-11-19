@@ -15,6 +15,11 @@ export class TierOfferComponent implements OnInit {
 
   ngOnInit() {
     this.offers = this.sessionSvc.getSelectedTierOffers();
+    this.sessionSvc.offersChanged.subscribe(
+        (offers: ServiceOffer[]) => {
+            this.offers = offers
+        }
+    );
   }
 
 }

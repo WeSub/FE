@@ -9,31 +9,30 @@ export class ProfessionalService {
     comfortableOffers: ServiceOffer[];
     premiumOffers: ServiceOffer[];
 
-  constructor(private offerSvc: OffersService) {
-      this.budgetOffers = [];
-      this.comfortableOffers = [];
-      this.premiumOffers = [];
-  }
+  constructor(private offerSvc: OffersService) { }
 
   getBudget(): ServiceOffer[] {
+      this.budgetOffers = [];
       this.budgetOffers.push(this.offerSvc.gethighestMobile());
       this.budgetOffers.push(this.offerSvc.gethighestInternet());
-      return this.budgetOffers;
+      return this.budgetOffers.slice();
   }
 
   getComfortable(): ServiceOffer[] {
+      this.comfortableOffers = [];
       this.comfortableOffers.push(this.budgetOffers[0]);
       this.comfortableOffers.push(this.budgetOffers[1]);
       this.comfortableOffers.push(this.offerSvc.gethighestStreaming());
-      return this.comfortableOffers;
+      return this.comfortableOffers.slice();
   }
 
   getPremium(): ServiceOffer[] {
+      this.premiumOffers = [];
       this.premiumOffers.push(this.comfortableOffers[0]);
       this.premiumOffers.push(this.comfortableOffers[1]);
       this.premiumOffers.push(this.comfortableOffers[2]);
       this.premiumOffers.push(this.offerSvc.gethighestFitness());
-      return this.premiumOffers;
+      return this.premiumOffers.slice();
   }
 
 }

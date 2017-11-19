@@ -48,14 +48,13 @@ export class AppComponent {
   }
 
   ngOnInit() {
-      this.personas = [
-        this.persona1,
-        this.persona2,
-        this.persona3,
-        this.persona4
-      ]
+    this.personas = [
+      this.persona1,
+      this.persona2,
+      this.persona3,
+      this.persona4
+    ];
 
-      this.sessionPersona = this.sessionSvc.getSessionPersona(); // this creates an empty sessionPersona to store user's selections as an object for later use
-      console.log(this.sessionPersona);
+    this.sessionPersona = this.sessionSvc.getSessionPersona();
   }
 }

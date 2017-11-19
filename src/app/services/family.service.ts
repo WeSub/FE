@@ -18,14 +18,14 @@ export class FamilyService {
   getBudget(): ServiceOffer[] {
       this.budgetOffers.push();
       this.budgetOffers.push();
-      return this.budgetOffers;
+      return this.budgetOffers.slice();
   }
 
   getComfortable(): ServiceOffer[] {
       this.comfortableOffers.push();
       this.comfortableOffers.push();
       this.comfortableOffers.push();
-      return this.comfortableOffers;
+      return this.comfortableOffers.slice();
   }
 
   getPremium(): ServiceOffer[] {
@@ -33,7 +33,7 @@ export class FamilyService {
       this.premiumOffers.push();
       this.premiumOffers.push();
       this.premiumOffers.push();
-      return this.premiumOffers;
+      return this.premiumOffers.slice();
   }
 
 }
