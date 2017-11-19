@@ -9,30 +9,29 @@ export class FamilyService {
   comfortableOffers: ServiceOffer[];
   premiumOffers: ServiceOffer[];
 
-  constructor(private offerSvc: OffersService) {
-    this.budgetOffers = [];
-    this.comfortableOffers = [];
-    this.premiumOffers = [];
-  }
+  constructor(private offerSvc: OffersService) { }
 
   getBudget(): ServiceOffer[] {
-      this.budgetOffers.push();
-      this.budgetOffers.push();
+      this.budgetOffers = [];
+      this.budgetOffers.push(this.offerSvc.getlowestFamilyMobile());
+      this.budgetOffers.push(this.offerSvc.getlowestInternet());
       return this.budgetOffers.slice();
   }
 
   getComfortable(): ServiceOffer[] {
-      this.comfortableOffers.push();
-      this.comfortableOffers.push();
-      this.comfortableOffers.push();
+      this.comfortableOffers = [];
+      this.comfortableOffers.push(this.budgetOffers[0]);
+      this.comfortableOffers.push(this.budgetOffers[1]);
+      this.comfortableOffers.push(this.offerSvc.getlowestStreaming());
       return this.comfortableOffers.slice();
   }
 
   getPremium(): ServiceOffer[] {
-      this.premiumOffers.push();
-      this.premiumOffers.push();
-      this.premiumOffers.push();
-      this.premiumOffers.push();
+      this.premiumOffers = [];
+      this.premiumOffers.push(this.offerSvc.gethighestFamilyMobile());
+      this.premiumOffers.push(this.offerSvc.gethighestStreaming());
+      this.premiumOffers.push(this.offerSvc.getlowestFitness());
+      this.premiumOffers.push(this.offerSvc.gethighestFitness());
       return this.premiumOffers.slice();
   }
 

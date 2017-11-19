@@ -12,6 +12,7 @@
       <th class="single line">SMS/MMS</th>
       <th>Speed Up</th>
       <th>Speed Down</th>
+      <th>Family Package Info</th>
       <th class="single line">Price</th>
     </tr>
   </thead>
@@ -46,6 +47,9 @@
       </td>
       <td>
           {{ offer.speedDown }}
+      </td>
+      <td>
+          {{ offer.family }} - {{ offer.familyInfo }}
       </td>
       <td class="single line">
           {{ offer.price }} pr. month

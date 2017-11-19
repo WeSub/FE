@@ -12,6 +12,8 @@ export class ServiceOffer {
   public talk: string;
   public data: string;
   public sms: string;
+  public family: number;
+  public familyInfo: string;
   public speedDown: number;
   public speedUp: number;
 
@@ -29,7 +31,9 @@ export class ServiceOffer {
     data?: string,
     sms?: string,
     speedDown?: number,
-    speedUp?: number) {
+    speedUp?: number,
+    family?: number,
+    familyInfo?: string) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -44,5 +48,7 @@ export class ServiceOffer {
         this.sms = sms || '';
         this.speedDown = speedDown || 0;
         this.speedUp = speedUp || 0;
+        this.family = family;
+        this.familyInfo = familyInfo;
     };
 }

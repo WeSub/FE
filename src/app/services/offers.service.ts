@@ -10,6 +10,7 @@ export class OffersService {
   private internetOffers: ServiceOffer[];
   private streamOffers: ServiceOffer[];
   private fitnessOffers: ServiceOffer[];
+  private mobileOffersFamily: ServiceOffer[];
 
   constructor() {
     this.mobileOffers = [
@@ -26,18 +27,24 @@ export class OffersService {
     ];
 
     this.streamOffers = [
-        new ServiceOffer(8, 'Netflix', 'Basis', 'https://www.netflix.com/signup/regform', 'streaming', 79, 'monthly', false, ''),
-        new ServiceOffer(8, 'Netflix', 'Premium', 'https://www.netflix.com/signup/regform', 'streaming', 129, 'monthly', false, ''),
-        new ServiceOffer(8, 'HBO Nordic', 'Streaming on all devices', 'https://dk.hbonordic.com/registration', 'streaming', 89, 'monthly', false, '')
+      new ServiceOffer(8, 'Netflix', 'Basis', 'https://www.netflix.com/signup/regform', 'streaming', 79, 'monthly', false, ''),
+      new ServiceOffer(8, 'Netflix', 'Premium', 'https://www.netflix.com/signup/regform', 'streaming', 129, 'monthly', false, ''),
+      new ServiceOffer(8, 'HBO Nordic', 'Streaming on all devices', 'https://dk.hbonordic.com/registration', 'streaming', 89, 'monthly', false, '')
     ];
 
     this.fitnessOffers = [
-        new ServiceOffer(8, 'Fitness World', '1 Center', 'https://www.fitnessworld.dk/onlinesalg?pid=135&_ga=2.117119937.633312661.1511099001-643498063.1511099001', 'fitness', 159, 'monthly', false, ''),
-        new ServiceOffer(8, 'Fitness World', 'All Centers', 'https://www.fitnessworld.dk/onlinesalg?pid=135&_ga=2.117119937.633312661.1511099001-643498063.1511099001', 'fitness', 259, 'monthly', false, ''),
-        new ServiceOffer(8, 'Fitness DK', 'Anytime Premium', 'https://www.fitnessdk.dk/signup/center/22/plan/medlemskab-anytime_premium', 'fitness', 499, 'monthly', false, ''),
+      new ServiceOffer(8, 'Fitness World', '1 Center', 'https://www.fitnessworld.dk/onlinesalg?pid=135&_ga=2.117119937.633312661.1511099001-643498063.1511099001', 'fitness', 159, 'monthly', false, ''),
+      new ServiceOffer(8, 'Fitness World', 'All Centers', 'https://www.fitnessworld.dk/onlinesalg?pid=135&_ga=2.117119937.633312661.1511099001-643498063.1511099001', 'fitness', 259, 'monthly', false, ''),
+      new ServiceOffer(8, 'Fitness DK', 'Anytime Premium', 'https://www.fitnessdk.dk/signup/center/22/plan/medlemskab-anytime_premium', 'fitness', 499, 'monthly', false, ''),
+    ];
+
+    this.mobileOffersFamily = [
+      new ServiceOffer(1, 'Telenor', 'Fri+', 'https://www.telenor.dk/shop/abonnementer/', 'mobile', 249, 'monthly', false, 'min. 6 months', 'unlimited', '40 GB', 'unlimited'),
+      new ServiceOffer(4, 'Telia', '4Everything Premium', 'https://shop.telia.dk/subscription-view.ep?offering=NBMA11.BASIC&valueAddedServices=OSCRLH,OSCHBO', 'mobile', 399, 'monthly', false, 'min. 6 months', 'unlimited', '100 GB', 'unlimited', 0, 0, 119, 'per extra SIM card')
     ];
 
     this.sortLowestHighest(this.mobileOffers);
+    this.sortLowestHighest(this.mobileOffersFamily);
     this.sortLowestHighest(this.internetOffers);
     this.sortLowestHighest(this.streamOffers);
     this.sortLowestHighest(this.fitnessOffers);
@@ -84,6 +91,13 @@ export class OffersService {
   }
 
   // Family specific plans or highest amount of database
+  getlowestFamilyMobile(): ServiceOffer {
+    return this.mobileOffersFamily[0];
+  }
+
+  gethighestFamilyMobile(): ServiceOffer {
+    return this.mobileOffersFamily[this.mobileOffersFamily.length - 1];
+  }
 
   // Criteria for Seniors?
 
