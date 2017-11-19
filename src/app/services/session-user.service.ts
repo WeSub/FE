@@ -12,6 +12,9 @@ export class SessionUserService {
   sessionPersona: SessionPersona;
   offers: ServiceOffer[];
   offersChanged = new EventEmitter<ServiceOffer[]>();
+  budgetChanged = new EventEmitter<ServiceOffer[]>();
+  comfortableChanged = new EventEmitter<ServiceOffer[]>();
+  premiumChanged = new EventEmitter<ServiceOffer[]>();
 
   // create and return the sessionPersona app-wide
   constructor(private studentSvc: StudentService,
@@ -50,27 +53,33 @@ export class SessionUserService {
 
   // call the selected persona svc and get the offers
   setStudentOffers() {
-      this.sessionPersona.budget = this.studentSvc.getBudget();
-      this.sessionPersona.comfortable = this.studentSvc.getComfortable();
-      this.sessionPersona.premium = this.studentSvc.getPremium();
+    this.sessionPersona.budget = this.studentSvc.getBudget();
+    this.sessionPersona.comfortable = this.studentSvc.getComfortable();
+    this.sessionPersona.premium = this.studentSvc.getPremium();
+    this.setSelectedTierOffers(this.sessionPersona.selectedTierName);
   }
 
   setProfessionalOffers() {
     this.sessionPersona.budget = this.proSvc.getBudget();
     this.sessionPersona.comfortable = this.proSvc.getComfortable();
     this.sessionPersona.premium = this.proSvc.getPremium();
+    this.setSelectedTierOffers(this.sessionPersona.selectedTierName);
   }
 
   setFamilyOffers() {
     this.sessionPersona.budget = this.famSvc.getBudget();
     this.sessionPersona.comfortable = this.famSvc.getComfortable();
     this.sessionPersona.premium = this.famSvc.getPremium();
+    this.setSelectedTierOffers(this.sessionPersona.selectedTierName);
   }
   //
   // setSeniorOffers() {
   //   this.sessionPersona.budget = this.seniorSvc.getBudget();
   //   this.sessionPersona.comfortable = this.seniorSvc.getComfortable();
   //   this.sessionPersona.premium = this.seniorSvc.getPremium();
+  // this.budgetChanged.emit(this.sessionPersona.budget);
+  // this.comfortableChanged.emit(this.sessionPersona.budget);
+  // this.premiumChanged.emit(this.sessionPersona.budget);
   // }
 
   // set and return the selected tier OffersService

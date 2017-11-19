@@ -24,7 +24,7 @@ export class PersonaListItemComponent implements OnInit {
   ngOnInit() {
   }
 
-  clicked(personaName: string) {
+  clicked(personaName: string): void {
     this.sessionSvc.setSessionPersonaName(personaName);
     switch (personaName) {
       case 'Students': this.sessionSvc.setStudentOffers();
