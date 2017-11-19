@@ -21,8 +21,6 @@ export class TierBudgetMenuItemComponent implements OnInit {
 
   selectTier(tier: string) {
       this.sessionSvc.setSelectedTierOffers(tier);
-      console.log(this.sessionSvc.getSelectedTierName());
-      console.log(this.sessionSvc.getSelectedTierOffers());
   }
 
 }

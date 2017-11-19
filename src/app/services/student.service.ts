@@ -15,7 +15,6 @@ export class StudentService {
       this.premiumOffers = [];
   }
 
-// Needs to be optimised, do I really need to return all these times?
   getBudget(): ServiceOffer[] {
       this.budgetOffers.push(this.offerSvc.getlowestMobile());
       this.budgetOffers.push(this.offerSvc.getlowestInternet());

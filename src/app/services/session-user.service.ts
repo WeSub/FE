@@ -49,26 +49,19 @@ export class SessionUserService {
     this.sessionPersona.budget = this.studentSvc.getBudget();
     this.sessionPersona.comfortable = this.studentSvc.getComfortable();
     this.sessionPersona.premium = this.studentSvc.getPremium();
-    console.log(this.sessionPersona.budget);
-    console.log(this.sessionPersona.comfortable);
-    console.log(this.sessionPersona.premium);
   }
 
   setProfessionalOffers() {
     this.sessionPersona.budget = this.proSvc.getBudget();
     this.sessionPersona.comfortable = this.proSvc.getComfortable();
     this.sessionPersona.premium = this.proSvc.getPremium();
-    console.log(this.sessionPersona.budget);
-    console.log(this.sessionPersona.comfortable);
-    console.log(this.sessionPersona.premium);
   }
 
-  //
-  // setFamilyOffers() {
-  //   this.sessionPersona.budget = this.famSvc.getBudget();
-  //   this.sessionPersona.comfortable = this.famSvc.getComfortable();
-  //   this.sessionPersona.premium = this.famSvc.getPremium();
-  // }
+  setFamilyOffers() {
+    this.sessionPersona.budget = this.famSvc.getBudget();
+    this.sessionPersona.comfortable = this.famSvc.getComfortable();
+    this.sessionPersona.premium = this.famSvc.getPremium();
+  }
   //
   // setSeniorOffers() {
   //   this.sessionPersona.budget = this.seniorSvc.getBudget();
@@ -80,12 +73,12 @@ export class SessionUserService {
   setSelectedTierOffers(selectedTierName: string): void {
     this.sessionPersona.selectedTierName = selectedTierName;
     switch (selectedTierName) {
-      case 'budget':
+      case 'Budget':
         this.sessionPersona.selectedTierOffers = this.sessionPersona.budget;
         break;
-      case 'comfortable': this.sessionPersona.selectedTierOffers = this.sessionPersona.comfortable;
+      case 'Comfortable': this.sessionPersona.selectedTierOffers = this.sessionPersona.comfortable;
         break;
-      case 'premium': this.sessionPersona.selectedTierOffers = this.sessionPersona.premium;
+      case 'Premium': this.sessionPersona.selectedTierOffers = this.sessionPersona.premium;
         break;
     };
   }

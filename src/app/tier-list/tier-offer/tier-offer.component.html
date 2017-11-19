@@ -1,3 +1,56 @@
-<p>
-  tier-offer works!
-</p>
+<h3>Your Offers:</h3>
+<table class="ui celled padded table">
+  <thead>
+    <tr>
+      <th class="single line">Name</th>
+      <th class="single line">Description</th>
+      <th class="single line">Category</th>
+      <th class="single line">Period</th>
+      <th class="single line">Terms</th>
+      <th class="single line">Talk</th>
+      <th class="single line">Data</th>
+      <th class="single line">SMS/MMS</th>
+      <th>Speed Up</th>
+      <th>Speed Down</th>
+      <th class="single line">Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let offer of offers">
+      <td>
+        <h2 class="ui center aligned header">{{ offer.name }}</h2>
+      </td>
+      <td class="single line">
+        {{ offer.description }}
+      </td>
+      <td>
+        {{ offer.category }}
+      </td>
+      <td class="right aligned">
+        {{ offer.period }}<br>
+      </td>
+      <td>
+        {{ offer.terms }}
+      </td>
+      <td>
+          {{ offer.talk }}
+      </td>
+      <td>
+          {{ offer.data }}
+      </td>
+      <td>
+          {{ offer.sms }}
+      </td>
+      <td>
+          {{ offer.speedUp }}
+      </td>
+      <td>
+          {{ offer.speedDown }}
+      </td>
+      <td class="single line">
+          {{ offer.price }} pr. month
+          <a href="{{ offer.svcUrl }}" target="_blank"><button type="button" class="ui teal button">Sign up</button></a>
+      </td>
+    </tr>
+  </tbody>
+</table>

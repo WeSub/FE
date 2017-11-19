@@ -31,6 +31,8 @@ export class PersonaListItemComponent implements OnInit {
         break;
       case 'Professionals': this.sessionSvc.setProfessionalOffers();
         break;
+      case 'Families': this.sessionSvc.setFamilyOffers();
+        break;
     }
   }
 
