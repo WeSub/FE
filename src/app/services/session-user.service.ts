@@ -72,15 +72,15 @@ export class SessionUserService {
     this.sessionPersona.premium = this.famSvc.getPremium();
     this.setSelectedTierOffers(this.sessionPersona.selectedTierName);
   }
-  //
-  // setSeniorOffers() {
-  //   this.sessionPersona.budget = this.seniorSvc.getBudget();
-  //   this.sessionPersona.comfortable = this.seniorSvc.getComfortable();
-  //   this.sessionPersona.premium = this.seniorSvc.getPremium();
-  // this.budgetChanged.emit(this.sessionPersona.budget);
-  // this.comfortableChanged.emit(this.sessionPersona.budget);
-  // this.premiumChanged.emit(this.sessionPersona.budget);
-  // }
+
+  setSeniorOffers() {
+    this.sessionPersona.budget = this.seniorSvc.getBudget();
+    this.sessionPersona.comfortable = this.seniorSvc.getComfortable();
+    this.sessionPersona.premium = this.seniorSvc.getPremium();
+    this.budgetChanged.emit(this.sessionPersona.budget);
+    this.comfortableChanged.emit(this.sessionPersona.budget);
+    this.premiumChanged.emit(this.sessionPersona.budget);
+  }
 
   // set and return the selected tier OffersService
   setSelectedTierOffers(selectedTierName: string): void {

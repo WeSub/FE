@@ -6,8 +6,8 @@ import { OffersService } from '../services/offers.service';
 @Injectable()
 export class StudentService {
   budgetOffers: ServiceOffer[];
-  comfortableOffers: ServiceOffer[] = [];
-  premiumOffers: ServiceOffer[] = [];
+  comfortableOffers: ServiceOffer[];
+  premiumOffers: ServiceOffer[];
 
   constructor(private offerSvc: OffersService) {
   }
