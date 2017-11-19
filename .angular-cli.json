@@ -19,9 +19,6 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "assets/vendor/fontawesome-5.0.0-rc2-mac/css/fontawesome-pro-brands.css",
-        "assets/vendor/fontawesome-5.0.0-rc2-mac/css/fontawesome-pro-solid.css",
-        "assets/vendor/fontawesome-5.0.0-rc2-mac/css/fontawesome-pro-core.css",
         "../semantic/dist/semantic.min.css",
         "sass/styles.scss"
       ],
@@ -31,9 +28,6 @@
           ]
         },
       "scripts": [
-          "assets/vendor/fontawesome-5.0.0-rc2-mac/js/packs/brands.min.js",
-          "assets/vendor/fontawesome-5.0.0-rc2-mac/js/packs/solid.min.js",
-          "assets/vendor/fontawesome-5.0.0-rc2-mac/js/fontawesome.min.js",
           "../semantic/dist/semantic.min.js"
       ],
       "environmentSource": "environments/environment.ts",
