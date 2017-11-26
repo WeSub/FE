@@ -5,7 +5,7 @@ import { Component, OnInit, HostBinding } from '@angular/core';
   template: `
     <br>
     <br>
-    <h2 class="ui header">About WeSub</h2>
+    <h2 class="title">About WeSub</h2>
     <p>Some decription about mission, goals, and other stuff.</p>
   `,
   styleUrls: ['./about.component.scss']

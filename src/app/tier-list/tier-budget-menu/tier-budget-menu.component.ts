@@ -10,7 +10,7 @@ import { Component, OnInit, Input, HostBinding } from '@angular/core';
   styleUrls: ['./tier-budget-menu.component.scss']
 })
 export class TierBudgetMenuComponent implements OnInit {
-  @HostBinding('attr.class') contClass = 'ui compact vertical mini labeled icon menu';
+  @HostBinding('attr.class') contClass = 'ui raised cards list';
   tiers: string[];
 
   constructor() {

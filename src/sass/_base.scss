@@ -16,10 +16,15 @@ a {
   color: $link-color;
   text-decoration: none;
   &:hover {
-      color: darken($link-color, $darken-amount);
+      color: lighten($link-color, $darken-amount);
   }
 }
 
 .header {
     color: $headline-color;
+}
+
+.title {
+    font-size: calc(600% + 0.5vw);
+    font-weight: medium;
 }

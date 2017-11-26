@@ -3,6 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, AbstractControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+// Services and Directives
+import { AppRouterModule } from './app-router/app-router.module';
+import { DropdownDirective } from './shared/dropdown.directive';
+import { OffersService } from './services/offers.service';
+import { SessionUserService } from './services/session-user.service';
+import { StudentService } from './services/student.service';
+import { ProfessionalService } from './services/professional.service';
+import { FamilyService } from './services/family.service';
+import { SeniorService } from './services/senior.service';
+
 // Components
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -11,6 +21,7 @@ import { FooterComponent } from './footer/footer.component';
 import { TeamRosterComponent } from './contact/team-roster/team-roster.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
+import { StartButtonComponent } from './shared/start-button/start-button.component';
 import { SearchBarComponent } from './shared/search-bar/search-bar.component';
 import { StepsComponent } from './shared/steps/steps.component';
 import { PersonaListComponent } from './persona-list/persona-list.component';
@@ -19,15 +30,6 @@ import { TierListComponent } from './tier-list/tier-list.component';
 import { TierOfferComponent } from './tier-list/tier-offer/tier-offer.component';
 import { TierBudgetMenuComponent } from './tier-list/tier-budget-menu/tier-budget-menu.component';
 import { TierBudgetMenuItemComponent } from './tier-list/tier-budget-menu/tier-budget-menu-item/tier-budget-menu-item.component';
-
-// Services and Directives
-import { DropdownDirective } from './shared/dropdown.directive';
-import { OffersService } from './services/offers.service';
-import { SessionUserService } from './services/session-user.service';
-import { StudentService } from './services/student.service';
-import { ProfessionalService } from './services/professional.service';
-import { FamilyService } from './services/family.service';
-import { SeniorService } from './services/senior.service';
 
 @NgModule({
   declarations: [
@@ -46,12 +48,14 @@ import { SeniorService } from './services/senior.service';
     TierOfferComponent,
     TierBudgetMenuComponent,
     TierBudgetMenuItemComponent,
-    DropdownDirective
+    DropdownDirective,
+    StartButtonComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AppRouterModule
   ],
   providers: [OffersService, SessionUserService, StudentService, ProfessionalService, FamilyService, SeniorService],
   bootstrap: [AppComponent]

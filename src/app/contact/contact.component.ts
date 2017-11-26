@@ -5,10 +5,21 @@ import { Component, OnInit, HostBinding } from '@angular/core';
   template: `
     <br>
     <br>
-    <h2 class="ui center aligned header">Meet the WeSub Team!</h2>
+    <h1 class="title">Meet the WeSub Team!</h1>
     <br>
     <br>
-    <app-team-roster></app-team-roster>
+    <div class="ui raised segment">
+        <br>
+        <br>
+        <div class="ui two column grid">
+            <div class="four wide column"></div>
+            <div class="twelve wide column">
+                <app-team-roster></app-team-roster>
+            </div>
+        </div>
+        <br>
+        <br>
+    </div>
   `,
   styleUrls: ['./contact.component.scss']
 })
