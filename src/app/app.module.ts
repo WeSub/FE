@@ -1,3 +1,6 @@
+// SEC: WeSub App is organized where each 'step' of the process is it's own container and tree of components. They call services to populate the data and copy the user selection into the session user object so that at the end the object/settings could be saved or analyzed in the future beyond MVP.
+// SEC: Static pages are their own container and components, components that show up in other containers will be put in the 'shared' directory.
+// SEC: Routing is handled by the AppRouter and the format [routerLink]="['link', 'sublink'] will be used in HTML to allow user to utilize the browswer 'back' button and get the expected behavior of moving back a step instead of leaving the app/page and losing the current state.
 // Core
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -15,9 +18,9 @@ import { SeniorService } from './services/senior.service';
 
 // Components
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './navbar/navbar.component';
+import { NavbarComponent } from './shared/navbar/navbar.component';
 import { HeaderContainerComponent } from './header-container/header-container.component';
-import { FooterComponent } from './footer/footer.component';
+import { FooterComponent } from './shared/footer/footer.component';
 import { TeamRosterComponent } from './contact/team-roster/team-roster.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';

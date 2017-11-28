@@ -9,6 +9,8 @@ import { SessionPersona } from './classes/session-persona.model';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  // SEC: Each persona is an object with attributes that will get copied to the session object in order to build and save user selections as they move through the web app. This also makes it easier to display each persona while keeping changeable data in one location.
+  // SEC: These might need to be populated as a result of the CTA button / search function so will be moved out of the app.component
   personas: Persona[];
   persona1: Persona;
   persona2: Persona;

@@ -1,5 +1,10 @@
 @import "variables";
 
-#header-container {
-    padding: $component-padding;
+#header-grid {
+    background-color: $text-color;
+    margin: -1.5em 0;
+}
+
+#logo-text {
+    padding-left: 5rem;
 }

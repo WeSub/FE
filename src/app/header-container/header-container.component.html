@@ -1,12 +1,21 @@
-<div class="ui header main text container" id="header-container">
-  <h1 class="title">WeSub</h1>
-  <h2 class="ui center aligned header">Welcome to the easiest and fastest way to discover and sign up for your subscriptions services!</h2>
-  <br>
-  <br>
-  <app-steps></app-steps>
-  <br>
-  <br>
-  <app-start-button></app-start-button>
-  <br>
-  <app-search-bar></app-search-bar>
+<!-- SEC: Main splash text with CTA and seach bar, to be moved to the TS file after search func is working -->
+<div class="ui header main fluid container" id="header-container">
+    <div class="ui two column fluid grid" id="header-grid">
+        <div class="column" id="logo-text">
+             <h1 class="ui inverted header">WeSub</h1>
+        </div>
+        <div class="column">
+             <h2 class="logo-text2">Welcome to the easiest and fastest way to discover and sign up for your subscriptions services!</h2>
+        </div>
+    </div>
+   <div class="ui text container">
+      <br>
+      <br>
+      <app-steps></app-steps>
+      <br>
+      <br>
+      <app-start-button></app-start-button>
+      <br>
+      <app-search-bar></app-search-bar>
+  </div>
 </div>

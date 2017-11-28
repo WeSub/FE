@@ -1,19 +1,19 @@
 <h3>Your Offers:</h3>
-<table class="ui celled padded table">
+<table class="ui collapsing celled inverted blue table segment">
   <thead>
-    <tr>
-      <th class="single line">Name</th>
+    <tr class="center aligned">
+      <th>Name</th>
       <th>Description</th>
-      <th class="single line">Category</th>
-      <th class="single line">Period</th>
-      <th class="single line">Terms</th>
-      <th class="single line">Talk</th>
-      <th class="single line">Data</th>
+      <th>Category</th>
+      <th>Period</th>
+      <th>Terms</th>
+      <th>Talk</th>
+      <th>Data</th>
       <th>SMS/MMS</th>
       <th>Speed Up</th>
       <th>Speed Down</th>
       <th>Family Package Info</th>
-      <th class="single line">Price</th>
+      <th>Price</th>
     </tr>
   </thead>
   <tbody>
@@ -52,8 +52,8 @@
           {{ offer.family }} - {{ offer.familyInfo }}
       </td>
       <td class="single line right aligned">
-          {{ offer.price }} pr. month
-          <a href="{{ offer.svcUrl }}" target="_blank"><button type="button" class="ui red button">Sign up</button></a>
+          {{ offer.price }} pr. month &nbsp;&nbsp;
+          <a href="{{ offer.svcUrl }}" target="_blank"><button type="button" class="ui inverted red circular button">Sign up</button></a>
       </td>
     </tr>
   </tbody>

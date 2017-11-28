@@ -1,9 +1,15 @@
+<!-- SEC: Constant Navbar -->
 <app-navbar></app-navbar>
+<!-- SEC: Begin dynamic container of changing components -->
 <div class="ui fluid container" id="main-container">
+  <!-- SEC: Present the desired components via appRouter -->
   <router-outlet></router-outlet>
+
+  <!-- SEC: Old method of presenting the components and passing in the data as inputs, needs to be updated with router -->
   <app-persona-list [personasList]="personas"></app-persona-list>
   <br>
   <br>
   <app-tier-list [sessionPersona]="sessionPersona"></app-tier-list>
 </div>
+<!-- SEC: Constant footer -->
 <app-footer></app-footer>

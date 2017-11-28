@@ -1,4 +1,4 @@
-// This is the persona model that is used to create the Peronas-list options
+// SEC: This is the model used to create the Personas that populate the list for the user to choose from.
 export class Persona {
   id: number;
   name: string;

@@ -1,4 +1,4 @@
-// This is the service offer model that is used to create an offer object, this may need to be separated at some point to the service types.
+// SEC: This is the service offer model that is used to create an offer object, this may need to be separated at some point to the different service types (i.e., mobile, internet, streaming). Otherwise consider the 'decorator' design pattern and change the ServiceOffer[] into just an Object[].
 export class ServiceOffer {
   public id: number;
   public name: string;

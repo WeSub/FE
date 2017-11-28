@@ -23,6 +23,7 @@ export class TeamRosterComponent implements OnInit {
     team: Object[];
 
   constructor() {
+      // Below populates the information for the team component, just edit/add/delete members as JS objects in this array.
       this.team = [
           {name: 'Benjamin', avatar: '../assets/images/avatars/benjamin.png', email: 'email@email.com', message: 'Show some personality here.', linkedin: 'benjamin-rej-notlev-5844618a'},
           {name:'Nikol', avatar: '../assets/images/avatars/nikol.png', email: 'email@email.com', message: 'Show some personality here.', linkedin: 'nikol-murtingerová-83261891'},
