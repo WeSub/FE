@@ -16,7 +16,6 @@ export class AppComponent {
   persona2: Persona;
   persona3: Persona;
   persona4: Persona;
-  sessionPersona: SessionPersona;
 
   constructor(private sessionSvc: SessionUserService) {
 
@@ -57,6 +56,5 @@ export class AppComponent {
       this.persona4
     ];
 
-    this.sessionPersona = this.sessionSvc.getSessionPersona();
   }
 }

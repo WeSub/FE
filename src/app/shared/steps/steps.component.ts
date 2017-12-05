@@ -6,6 +6,7 @@ import { Component, OnInit, HostBinding } from '@angular/core';
   styleUrls: ['./steps.component.scss']
 })
 export class StepsComponent implements OnInit {
+  @HostBinding('attr.class') class = 'ui fluid mini vertical steps';
   constructor() { }
 
   ngOnInit() {

@@ -5,13 +5,13 @@ import { SessionUserService } from '../../services/session-user.service';
 @Component({
   selector: 'app-start-button',
   template: `
-    <h3 class="ui header" id="start">Get Started!</h3>
+    <a [routerLink]="['/home']"><h3 class="ui header" id="start" (click)="startSession()">Get Started!</h3></a>
   `,
   styleUrls: ['./start-button.component.scss']
 })
 export class StartButtonComponent implements OnInit {
   sessionPersona: SessionPersona;
-  @HostBinding('attr.class') contClass = 'ui fluid red button';
+  @HostBinding('attr.class') contClass = 'ui fluid black button';
   // @HostBinding('style.background-color') buttonColor = '#ff3d00';
   // @HostBinding('style.color') buttonText = '#fff';
   // @HostListener('mouseenter') mouseover() {
@@ -31,4 +31,7 @@ export class StartButtonComponent implements OnInit {
   ngOnInit() {
   }
 
+  startSession() {
+    this.sessionPersona = this.sessionSvc.getSessionPersona();
+  }
 }

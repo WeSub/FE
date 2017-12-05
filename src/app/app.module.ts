@@ -33,6 +33,9 @@ import { TierListComponent } from './tier-list/tier-list.component';
 import { TierOfferComponent } from './tier-list/tier-offer/tier-offer.component';
 import { TierBudgetMenuComponent } from './tier-list/tier-budget-menu/tier-budget-menu.component';
 import { TierBudgetMenuItemComponent } from './tier-list/tier-budget-menu/tier-budget-menu-item/tier-budget-menu-item.component';
+import { ContentContainerComponent } from './content-container/content-container.component';
+import { LogoComponent } from './shared/logo/logo.component';
+import { DetailComponent } from './shared/detail/detail.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +55,10 @@ import { TierBudgetMenuItemComponent } from './tier-list/tier-budget-menu/tier-b
     TierBudgetMenuComponent,
     TierBudgetMenuItemComponent,
     DropdownDirective,
-    StartButtonComponent
+    StartButtonComponent,
+    ContentContainerComponent,
+    LogoComponent,
+    DetailComponent
   ],
   imports: [
     BrowserModule,

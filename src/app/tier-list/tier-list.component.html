@@ -1,9 +1,9 @@
 <h3 class="header">Please select one of the tiers below for {{ sessionPersona.selectedPersonaName }}:</h3>
 <div class="ui two column fluid grid">
-    <div class="one wide column">
+    <div class="four wide column">
         <app-tier-budget-menu></app-tier-budget-menu>
     </div>
-    <div class="fifteen wide column">
+    <div class="ten wide column">
         <app-tier-offer *ngIf="sessionPersona.selectedTierOffers"></app-tier-offer>
     </div>
 </div>

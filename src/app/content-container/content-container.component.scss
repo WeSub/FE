@@ -1,0 +1,41 @@
+@import "variables";
+
+.page-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: $navbar-height 1fr 1fr $footer-height;
+    grid-gap: 5px;
+    // h-header
+    // m-menu
+    // c-content
+    // f-footer
+    grid-template-areas:
+        "h h h"
+        "m c c"
+        "f f f";
+}
+
+.header {
+    grid-area: h;
+}
+
+.menu {
+    grid-area: m;
+    margin-top: $navbar-height;
+    position: fixed;
+    border: 1px solid blue;
+}
+
+.content {
+    grid-area: c;
+    margin-top: $navbar-height;
+    border: 1px solid red;
+}
+
+.footer {
+   grid-area: f;
+   width: 100%;
+   position: absolute;
+   bottom: 0;
+}

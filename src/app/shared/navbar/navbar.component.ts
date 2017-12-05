@@ -21,7 +21,7 @@ import { Component, OnInit, HostBinding } from '@angular/core';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-  @HostBinding('attr.class') contClass = 'ui top fixed large inverted menu';
+  @HostBinding('attr.class') contClass = 'ui top fixed mini inverted menu';
   @HostBinding('attr.id') id = 'navbar';
   @HostBinding('style.background-color') navbarColor ='#2C9BD2';
   navlinks: Object[];
